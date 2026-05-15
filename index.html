@@ -1,1014 +1,4122 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casa Riviera — Premium 2BR Stay at Meikarta D2</title>
-    <meta name="description" content="Modern 2-bedroom apartment with panoramic view at Meikarta Riviera District 2. Booking langsung, no platform fees.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #f4f0e8;
-            --bg-alt: #ebe4d4;
-            --ink: #1c1c1a;
-            --ink-soft: #5a5651;
-            --accent: #8b3a1d;
-            --accent-soft: #c08c4c;
-            --line: rgba(28,28,26,0.12);
-            --paper: #fbf8f2;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: 'Inter Tight', sans-serif;
-            background: var(--bg);
-            color: var(--ink);
-            line-height: 1.55;
-            font-weight: 400;
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-        }
-
-        .serif { font-family: 'Fraunces', serif; }
-
-        img { max-width: 100%; display: block; }
-
-        a { color: inherit; text-decoration: none; }
-
-        /* ───── Header ───── */
-        .nav {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            z-index: 100;
-            padding: 1.4rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(244, 240, 232, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--line);
-        }
-
-        .brand {
-            font-family: 'Fraunces', serif;
-            font-size: 1.35rem;
-            font-weight: 500;
-            letter-spacing: -0.02em;
-        }
-
-        .brand span { color: var(--accent); font-style: italic; }
-
-        .nav-meta {
-            font-size: 0.78rem;
-            color: var(--ink-soft);
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
-
-        /* ───── Hero ───── */
-        .hero {
-            min-height: 100vh;
-            padding: 7rem 2rem 4rem;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 3rem;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 30%; right: -15%;
-            width: 400px; height: 400px;
-            background: radial-gradient(circle, rgba(192,140,76,0.15) 0%, transparent 70%);
-            border-radius: 50%;
-            z-index: 0;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.72rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--ink-soft);
-            margin-bottom: 1.8rem;
-            padding: 0.5rem 1rem;
-            border: 1px solid var(--line);
-            border-radius: 100px;
-            background: var(--paper);
-        }
-
-        .hero-tag::before {
-            content: '';
-            width: 6px; height: 6px;
-            background: var(--accent);
-            border-radius: 50%;
-        }
-
-        .hero h1 {
-            font-family: 'Fraunces', serif;
-            font-size: clamp(2.8rem, 8vw, 5.5rem);
-            font-weight: 400;
-            line-height: 0.95;
-            letter-spacing: -0.035em;
-            margin-bottom: 1.8rem;
-        }
-
-        .hero h1 em {
-            font-style: italic;
-            color: var(--accent);
-            font-weight: 300;
-        }
-
-        .hero p.lead {
-            font-size: 1.1rem;
-            color: var(--ink-soft);
-            max-width: 32rem;
-            margin-bottom: 2.5rem;
-            line-height: 1.65;
-        }
-
-        .hero-meta {
-            display: flex;
-            gap: 2.5rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--line);
-        }
-
-        .hero-meta-item {
-            display: flex;
-            flex-direction: column;
-            gap: 0.2rem;
-        }
-
-        .hero-meta-label {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--ink-soft);
-        }
-
-        .hero-meta-value {
-            font-family: 'Fraunces', serif;
-            font-size: 1.3rem;
-            font-weight: 500;
-        }
-
-        .cta-row {
-            margin-top: 2.5rem;
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 1rem 1.8rem;
-            font-family: 'Inter Tight', sans-serif;
-            font-weight: 500;
-            font-size: 0.92rem;
-            letter-spacing: 0.02em;
-            border: none;
-            cursor: pointer;
-            border-radius: 100px;
-            transition: all 0.25s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.6rem;
-        }
-
-        .btn-primary {
-            background: var(--ink);
-            color: var(--bg);
-        }
-
-        .btn-primary:hover {
-            background: var(--accent);
-            transform: translateY(-1px);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--ink);
-            border: 1px solid var(--ink);
-        }
-
-        .btn-secondary:hover {
-            background: var(--ink);
-            color: var(--bg);
-        }
-
-        .btn-arrow {
-            font-size: 1.1rem;
-            transition: transform 0.25s;
-        }
-
-        .btn:hover .btn-arrow { transform: translateX(3px); }
-
-        /* ───── Hero gallery ───── */
-        .hero-gallery {
-            position: relative;
-            z-index: 1;
-            display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            grid-template-rows: 240px 180px;
-            gap: 0.8rem;
-        }
-
-        .hero-img {
-            background: var(--bg-alt);
-            border-radius: 8px;
-            overflow: hidden;
-            position: relative;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-        }
-
-        .hero-img-main {
-            grid-row: 1 / 3;
-        }
-
-        .hero-img svg {
-            width: 100%;
-            height: 100%;
-            display: block;
-        }
-
-        @media (min-width: 880px) {
-            .hero {
-                grid-template-columns: 1.05fr 1fr;
-                padding: 8rem 4rem 6rem;
-            }
-            .hero-gallery {
-                grid-template-rows: 280px 220px;
-                gap: 1rem;
-            }
-        }
-
-        /* ───── Section base ───── */
-        section {
-            padding: 5rem 2rem;
-            position: relative;
-        }
-
-        @media (min-width: 880px) {
-            section { padding: 7rem 4rem; }
-        }
-
-        .section-label {
-            font-size: 0.72rem;
-            text-transform: uppercase;
-            letter-spacing: 0.18em;
-            color: var(--accent);
-            margin-bottom: 1.2rem;
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-        }
-
-        .section-label::before {
-            content: '';
-            width: 24px; height: 1px;
-            background: var(--accent);
-        }
-
-        .section-title {
-            font-family: 'Fraunces', serif;
-            font-size: clamp(2rem, 5vw, 3.2rem);
-            font-weight: 400;
-            letter-spacing: -0.025em;
-            line-height: 1.05;
-            margin-bottom: 1.2rem;
-        }
-
-        .section-title em {
-            font-style: italic;
-            color: var(--accent);
-        }
-
-        /* ───── About ───── */
-        .about {
-            background: var(--paper);
-            border-top: 1px solid var(--line);
-            border-bottom: 1px solid var(--line);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 3rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        @media (min-width: 880px) {
-            .about-grid {
-                grid-template-columns: 1fr 1.2fr;
-                gap: 6rem;
-            }
-        }
-
-        .about-text p {
-            color: var(--ink-soft);
-            font-size: 1.02rem;
-            margin-bottom: 1.2rem;
-            line-height: 1.75;
-        }
-
-        .feature-list {
-            list-style: none;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.4rem;
-            margin-top: 2rem;
-        }
-
-        .feature-list li {
-            padding-top: 1rem;
-            border-top: 1px solid var(--line);
-            font-size: 0.92rem;
-        }
-
-        .feature-list li strong {
-            display: block;
-            font-family: 'Fraunces', serif;
-            font-size: 1.05rem;
-            font-weight: 500;
-            margin-bottom: 0.2rem;
-        }
-
-        .feature-list li span {
-            color: var(--ink-soft);
-            font-size: 0.85rem;
-        }
-
-        /* ───── Gallery ───── */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            grid-auto-rows: 160px;
-            gap: 0.8rem;
-            margin-top: 3rem;
-        }
-
-        .gallery-grid > div {
-            background: var(--bg-alt);
-            border-radius: 6px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .gallery-grid > div:nth-child(1) { grid-column: span 4; grid-row: span 2; }
-        .gallery-grid > div:nth-child(2) { grid-column: span 2; }
-        .gallery-grid > div:nth-child(3) { grid-column: span 2; }
-        .gallery-grid > div:nth-child(4) { grid-column: span 3; }
-        .gallery-grid > div:nth-child(5) { grid-column: span 3; }
-
-        @media (max-width: 720px) {
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-                grid-auto-rows: 130px;
-            }
-            .gallery-grid > div { grid-column: span 1 !important; grid-row: auto !important; }
-            .gallery-grid > div:nth-child(1) { grid-column: span 2 !important; grid-row: span 2 !important; }
-        }
-
-        .gallery-grid svg { width: 100%; height: 100%; }
-
-        /* ───── Booking ───── */
-        .booking {
-            background: var(--ink);
-            color: var(--bg);
-        }
-
-        .booking .section-label { color: var(--accent-soft); }
-        .booking .section-label::before { background: var(--accent-soft); }
-
-        .booking-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 3rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        @media (min-width: 880px) {
-            .booking-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 5rem;
-            }
-        }
-
-        .booking-info p {
-            color: rgba(244, 240, 232, 0.7);
-            margin-bottom: 1rem;
-            line-height: 1.7;
-        }
-
-        .price-card {
-            background: rgba(244, 240, 232, 0.04);
-            border: 1px solid rgba(244, 240, 232, 0.12);
-            padding: 2.5rem;
-            border-radius: 12px;
-            margin-top: 2rem;
-        }
-
-        .price-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid rgba(244, 240, 232, 0.12);
-            margin-bottom: 1.2rem;
-        }
-
-        .price-amount {
-            font-family: 'Fraunces', serif;
-            font-size: 2.8rem;
-            font-weight: 400;
-            letter-spacing: -0.03em;
-        }
-
-        .price-period {
-            font-size: 0.85rem;
-            color: rgba(244, 240, 232, 0.5);
-            letter-spacing: 0.08em;
-        }
-
-        .price-detail {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.88rem;
-            padding: 0.4rem 0;
-            color: rgba(244, 240, 232, 0.75);
-        }
-
-        .price-detail strong { color: var(--bg); }
-
-        /* ───── Booking form ───── */
-        .booking-form {
-            background: var(--bg);
-            color: var(--ink);
-            padding: 2.5rem;
-            border-radius: 12px;
-        }
-
-        .form-title {
-            font-family: 'Fraunces', serif;
-            font-size: 1.6rem;
-            margin-bottom: 0.4rem;
-        }
-
-        .form-sub {
-            color: var(--ink-soft);
-            font-size: 0.88rem;
-            margin-bottom: 1.8rem;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.8rem;
-            margin-bottom: 1rem;
-        }
-
-        .form-field {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-field-full { grid-column: span 2; }
-
-        .form-field label {
-            font-size: 0.72rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--ink-soft);
-            margin-bottom: 0.4rem;
-        }
-
-        .form-field input,
-        .form-field select {
-            padding: 0.85rem 1rem;
-            background: var(--paper);
-            border: 1px solid var(--line);
-            border-radius: 6px;
-            font-family: 'Inter Tight', sans-serif;
-            font-size: 0.95rem;
-            color: var(--ink);
-            transition: all 0.2s;
-        }
-
-        .form-field input:focus,
-        .form-field select:focus {
-            outline: none;
-            border-color: var(--accent);
-            background: var(--bg);
-        }
-
-        .summary-box {
-            background: var(--paper);
-            border: 1px solid var(--line);
-            border-radius: 6px;
-            padding: 1.2rem;
-            margin: 1.4rem 0;
-        }
-
-        .summary-line {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.9rem;
-            padding: 0.35rem 0;
-            color: var(--ink-soft);
-        }
-
-        .summary-total {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            font-family: 'Fraunces', serif;
-            font-size: 1.5rem;
-            padding-top: 0.8rem;
-            margin-top: 0.4rem;
-            border-top: 1px solid var(--line);
-            color: var(--ink);
-        }
-
-        .summary-total .total-num { color: var(--accent); }
-
-        .book-btn {
-            width: 100%;
-            padding: 1.1rem;
-            background: var(--ink);
-            color: var(--bg);
-            border: none;
-            border-radius: 100px;
-            font-family: 'Inter Tight', sans-serif;
-            font-size: 0.95rem;
-            font-weight: 500;
-            letter-spacing: 0.02em;
-            cursor: pointer;
-            transition: all 0.25s;
-            margin-top: 0.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-        }
-
-        .book-btn:hover {
-            background: var(--accent);
-        }
-
-        .payment-note {
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-            justify-content: center;
-            margin-top: 1rem;
-            font-size: 0.78rem;
-            color: var(--ink-soft);
-        }
-
-        /* ───── Trust ───── */
-        .trust {
-            text-align: center;
-            padding: 4rem 2rem;
-            background: var(--paper);
-            border-top: 1px solid var(--line);
-        }
-
-        .trust-title {
-            font-family: 'Fraunces', serif;
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .trust-sub {
-            color: var(--ink-soft);
-            font-size: 0.92rem;
-            margin-bottom: 2.5rem;
-        }
-
-        .trust-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .trust-item {
-            text-align: left;
-            padding-top: 1.2rem;
-            border-top: 1px solid var(--line);
-        }
-
-        .trust-item-num {
-            font-family: 'Fraunces', serif;
-            font-size: 2.2rem;
-            font-weight: 500;
-            color: var(--accent);
-            line-height: 1;
-        }
-
-        .trust-item-label {
-            font-size: 0.85rem;
-            color: var(--ink-soft);
-            margin-top: 0.4rem;
-        }
-
-        /* ───── Footer ───── */
-        footer {
-            background: var(--ink);
-            color: rgba(244, 240, 232, 0.6);
-            padding: 3rem 2rem 2rem;
-            text-align: center;
-        }
-
-        .footer-brand {
-            font-family: 'Fraunces', serif;
-            font-size: 1.4rem;
-            color: var(--bg);
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-brand span { color: var(--accent-soft); font-style: italic; }
-
-        .footer-line {
-            font-size: 0.85rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .footer-meta {
-            font-size: 0.75rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(244, 240, 232, 0.1);
-            color: rgba(244, 240, 232, 0.4);
-        }
-
-        /* ───── Animations ───── */
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .hero-tag, .hero h1, .hero p.lead, .hero-meta, .cta-row {
-            animation: fadeUp 0.8s ease forwards;
-            opacity: 0;
-        }
-        .hero h1 { animation-delay: 0.1s; }
-        .hero p.lead { animation-delay: 0.2s; }
-        .hero-meta { animation-delay: 0.3s; }
-        .cta-row { animation-delay: 0.4s; }
-        .hero-gallery { animation: fadeUp 1s ease 0.5s forwards; opacity: 0; }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Casa Riviera — Premium 2BR Stay at Meikarta D2</title>
+<meta name="description" content="A modern 2-bedroom apartment on a high floor of Meikarta Riviera District 2. Owner-managed, directly bookable, no platform fees." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+/* ─────────────────────────────────────────────────────────────────────────
+   Casa Riviera — base styles
+   Three visual variants share most tokens; only accent rhythm + type scale
+   shift between them. Layout is fluid; mobile-first.
+   ───────────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* shared palette */
+  --bg: #f4f0e8;
+  --bg-alt: #ebe4d4;
+  --paper: #fbf8f2;
+  --ink: #1c1c1a;
+  --ink-soft: #6b665f;
+  --ink-mute: #a8a39a;
+  --accent: #8b3a1d;
+  --accent-soft: #c08c4c;
+  --line: rgba(28, 28, 26, 0.10);
+  --line-strong: rgba(28, 28, 26, 0.18);
+
+  /* type — overridden per variant */
+  --serif: 'Fraunces', 'Times New Roman', serif;
+  --sans: 'Inter Tight', system-ui, sans-serif;
+
+  --h-scale: 1.0;            /* heading size multiplier */
+  --rhythm: 1.0;             /* vertical rhythm multiplier */
+  --radius: 8px;
+  --radius-lg: 14px;
+
+  /* effective hero layout — set by JS to one of: split / fullbleed / centered */
+  --hero-min: 100vh;
+}
+
+/* ── Variants ───────────────────────────────────────────────────────────── */
+/* applied to <body data-variant="..."> */
+
+body[data-variant="minimal"] {
+  --h-scale: 0.95;
+  --rhythm: 1.1;
+  --radius: 4px;
+  --radius-lg: 8px;
+  --line: rgba(28, 28, 26, 0.08);
+  --accent: #6f3a23;          /* slightly muted */
+}
+
+body[data-variant="editorial"] {
+  --h-scale: 1.18;
+  --rhythm: 1.0;
+  --radius: 2px;
+  --radius-lg: 4px;
+  --accent: #8b3a1d;
+}
+
+body[data-variant="playful"] {
+  --h-scale: 1.02;
+  --rhythm: 0.95;
+  --radius: 14px;
+  --radius-lg: 22px;
+  --accent: #b04a26;
+}
+
+/* ── Reset & base ───────────────────────────────────────────────────────── */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.55;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  font-feature-settings: "ss01", "cv11";
+}
+img, svg { display: block; max-width: 100%; }
+button { font: inherit; cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+.serif { font-family: var(--serif); font-weight: 400; }
+
+/* ── Layout primitives ──────────────────────────────────────────────────── */
+
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+@media (min-width: 880px) {
+  .container { padding: 0 56px; }
+}
+
+section { position: relative; }
+
+.section-pad {
+  padding: calc(5rem * var(--rhythm)) 0;
+}
+@media (min-width: 880px) {
+  .section-pad { padding: calc(7rem * var(--rhythm)) 0; }
+}
+
+.section-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  margin-bottom: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-weight: 500;
+}
+.section-label::before {
+  content: '';
+  width: 28px; height: 1px;
+  background: var(--accent);
+}
+
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(1.9rem, calc(4.5vw * var(--h-scale)), calc(3.2rem * var(--h-scale)));
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  margin-bottom: 1.2rem;
+  text-wrap: balance;
+}
+.section-title em {
+  font-style: italic;
+  color: var(--accent);
+  font-weight: 300;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+/* ── Nav ────────────────────────────────────────────────────────────────── */
+
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 80;
+  padding: 1.1rem 0;
+  background: rgba(244, 240, 232, 0);
+  border-bottom: 1px solid transparent;
+  transition: background .25s ease, border-color .25s ease, padding .25s ease;
+}
+.nav.scrolled {
+  background: rgba(244, 240, 232, 0.86);
+  border-bottom-color: var(--line);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  padding: 0.85rem 0;
+}
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+.brand {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+}
+.brand em { font-style: italic; color: var(--accent); font-weight: 400; }
+.brand .dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: inline-block;
+  margin: 0 0.35rem;
+  transform: translateY(-3px);
+}
+.nav-links {
+  display: none;
+  gap: 2rem;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+.nav-links a {
+  position: relative;
+  transition: color .2s;
+}
+.nav-links a:hover { color: var(--ink); }
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 100%;
+  bottom: -4px; height: 1px;
+  background: var(--accent);
+  transition: right .25s ease;
+}
+.nav-links a:hover::after { right: 0; }
+.nav-cta {
+  display: none;
+  padding: 0.6rem 1.2rem;
+  background: var(--ink);
+  color: var(--bg);
+  border-radius: 100px;
+  font-size: 0.82rem;
+  letter-spacing: 0.01em;
+  border: none;
+  transition: background .2s;
+}
+.nav-cta:hover { background: var(--accent); }
+@media (min-width: 880px) {
+  .nav-links { display: flex; }
+  .nav-cta { display: inline-flex; align-items: center; gap: 0.4rem; }
+}
+
+/* ── Buttons ────────────────────────────────────────────────────────────── */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.95rem 1.6rem;
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.92rem;
+  letter-spacing: 0.01em;
+  border: none;
+  border-radius: 100px;
+  transition: background .25s ease, color .25s ease, transform .25s ease, border-color .25s ease;
+  white-space: nowrap;
+}
+.btn-primary { background: var(--ink); color: var(--bg); }
+.btn-primary:hover { background: var(--accent); transform: translateY(-1px); }
+.btn-secondary {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+}
+.btn-secondary:hover { background: var(--ink); color: var(--bg); }
+.btn .arr { transition: transform .25s; display: inline-block; }
+.btn:hover .arr { transform: translateX(4px); }
+
+/* Playful variant: pill buttons get a hair more padding + tinted secondary */
+body[data-variant="playful"] .btn { padding: 1.05rem 1.7rem; }
+body[data-variant="playful"] .btn-secondary {
+  border-color: var(--line-strong);
+  background: var(--paper);
+}
+
+/* Editorial variant: squarer buttons */
+body[data-variant="editorial"] .btn {
+  border-radius: 4px;
+  padding: 1rem 1.5rem;
+  letter-spacing: 0.04em;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+/* ── Hero ───────────────────────────────────────────────────────────────── */
+
+.hero {
+  min-height: 100svh;
+  padding: 7rem 0 4rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 20%; right: -10%;
+  width: 520px; height: 520px;
+  background: radial-gradient(circle, rgba(192,140,76,0.18) 0%, transparent 65%);
+  z-index: 0;
+  pointer-events: none;
+  filter: blur(10px);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 880px) {
+  .hero { padding: 8.5rem 0 6rem; }
+  .hero-grid { grid-template-columns: 1.05fr 1fr; gap: 4rem; }
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 1.8rem;
+  padding: 0.5rem 1rem 0.5rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  background: var(--paper);
+  font-weight: 500;
+}
+.hero-tag .pulse {
+  width: 7px; height: 7px;
+  background: #1f8a5b;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 0 0 rgba(31,138,91,0.4);
+  animation: pulse 2.2s infinite;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(31,138,91,0.4); }
+  70% { box-shadow: 0 0 0 8px rgba(31,138,91,0); }
+  100% { box-shadow: 0 0 0 0 rgba(31,138,91,0); }
+}
+
+h1.hero-title {
+  font-family: var(--serif);
+  font-size: clamp(2.6rem, calc(7vw * var(--h-scale)), calc(5.4rem * var(--h-scale)));
+  font-weight: 400;
+  line-height: 0.96;
+  letter-spacing: -0.035em;
+  margin-bottom: 1.6rem;
+  text-wrap: balance;
+}
+h1.hero-title em {
+  font-style: italic;
+  color: var(--accent);
+  font-weight: 300;
+}
+
+.hero-lead {
+  font-size: clamp(1rem, 1.4vw, 1.12rem);
+  color: var(--ink-soft);
+  max-width: 34rem;
+  line-height: 1.65;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 1.6rem 2.6rem;
+  flex-wrap: wrap;
+  margin-top: 2.2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+.hero-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.hero-meta-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-soft);
+}
+.hero-meta-value {
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.cta-row {
+  margin-top: 2.4rem;
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+/* Hero gallery (split layout) */
+.hero-gallery {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 220px 160px;
+  gap: 0.75rem;
+}
+.hero-img {
+  background: var(--bg-alt);
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), 0 18px 40px -28px rgba(0,0,0,0.18);
+}
+.hero-img-main { grid-row: 1 / 3; }
+.hero-img svg { width: 100%; height: 100%; }
+@media (min-width: 880px) {
+  .hero-gallery {
+    grid-template-rows: 280px 200px;
+    gap: 0.9rem;
+  }
+}
+
+/* Full-bleed hero variant */
+.hero[data-layout="fullbleed"] .hero-grid {
+  grid-template-columns: 1fr !important;
+}
+.hero[data-layout="fullbleed"] .hero-gallery {
+  display: none;
+}
+.hero[data-layout="fullbleed"] .hero-content {
+  max-width: 64rem;
+}
+.hero[data-layout="fullbleed"] .hero::after {
+  display: none;
+}
+.hero[data-layout="fullbleed"] .hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.95;
+  display: block !important;
+}
+.hero[data-layout="fullbleed"] .hero-grid { position: relative; z-index: 2; }
+
+.hero-bg { display: none; }
+
+/* Centered hero variant */
+.hero[data-layout="centered"] .hero-grid {
+  grid-template-columns: 1fr !important;
+  text-align: center;
+  justify-items: center;
+}
+.hero[data-layout="centered"] .hero-content { max-width: 46rem; }
+.hero[data-layout="centered"] .hero-lead { margin-left: auto; margin-right: auto; }
+.hero[data-layout="centered"] .hero-meta { justify-content: center; }
+.hero[data-layout="centered"] .cta-row { justify-content: center; }
+.hero[data-layout="centered"] .section-label { justify-content: center; }
+.hero[data-layout="centered"] .hero-tag { align-self: center; }
+.hero[data-layout="centered"] .hero-gallery {
+  margin-top: 3rem;
+  width: 100%;
+  max-width: 920px;
+  grid-template-rows: 200px 140px;
+}
+@media (min-width: 880px) {
+  .hero[data-layout="centered"] .hero-gallery { grid-template-rows: 260px 180px; }
+}
+
+/* ── About ─────────────────────────────────────────────────────────────── */
+
+.about {
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+@media (min-width: 880px) {
+  .about-grid { grid-template-columns: 0.85fr 1.15fr; gap: 5rem; }
+}
+.about-text p {
+  color: var(--ink-soft);
+  font-size: 1.02rem;
+  margin-bottom: 1.1rem;
+  line-height: 1.75;
+  max-width: 38rem;
+}
+.about-text p:last-of-type { margin-bottom: 0; }
+
+body[data-variant="editorial"] .about-text > p:first-of-type::first-letter {
+  font-family: var(--serif);
+  float: left;
+  font-size: 3.2rem;
+  line-height: 0.9;
+  padding: 0.3rem 0.6rem 0 0;
+  color: var(--accent);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.feature-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.3rem 1.6rem;
+  margin-top: 2.4rem;
+}
+@media (min-width: 720px) {
+  .feature-list { grid-template-columns: repeat(3, 1fr); }
+}
+.feature-list li {
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+.feature-list li strong {
+  display: block;
+  font-family: var(--serif);
+  font-size: 1.08rem;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+  letter-spacing: -0.01em;
+}
+.feature-list li span {
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+
+/* ── Gallery ───────────────────────────────────────────────────────────── */
+
+.gallery {
+  background: var(--bg);
+}
+.gallery-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.4rem;
+}
+.gallery-head .section-title { margin-bottom: 0; max-width: 28ch; }
+.gallery-head .hint {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 150px;
+  gap: 0.75rem;
+}
+.gallery-grid > .tile {
+  background: var(--bg-alt);
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: transform .35s cubic-bezier(.2,.7,.3,1);
+}
+.gallery-grid > .tile:hover { transform: scale(0.99); }
+.gallery-grid > .tile::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 65%, rgba(28,28,26,0.35) 100%);
+  opacity: 0;
+  transition: opacity .25s;
+}
+.gallery-grid > .tile:hover::after { opacity: 1; }
+.gallery-grid > .tile .tile-label {
+  position: absolute;
+  bottom: 0.9rem; left: 1rem;
+  font-size: 0.78rem;
+  color: var(--bg);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity .25s, transform .25s;
+  z-index: 1;
+}
+.gallery-grid > .tile:hover .tile-label { opacity: 1; transform: translateY(0); }
+.gallery-grid > .tile:nth-child(1) { grid-column: span 4; grid-row: span 2; }
+.gallery-grid > .tile:nth-child(2) { grid-column: span 2; }
+.gallery-grid > .tile:nth-child(3) { grid-column: span 2; }
+.gallery-grid > .tile:nth-child(4) { grid-column: span 3; }
+.gallery-grid > .tile:nth-child(5) { grid-column: span 3; }
+.gallery-grid svg { width: 100%; height: 100%; }
+@media (max-width: 720px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 130px;
+  }
+  .gallery-grid > .tile { grid-column: span 1 !important; grid-row: auto !important; }
+  .gallery-grid > .tile:nth-child(1) { grid-column: span 2 !important; grid-row: span 2 !important; }
+}
+
+/* ── Floor plan ────────────────────────────────────────────────────────── */
+
+.floorplan {
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+}
+.fp-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+@media (min-width: 880px) {
+  .fp-grid { grid-template-columns: 1.2fr 0.9fr; gap: 5rem; }
+}
+.fp-svg {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 1.4rem;
+  position: relative;
+}
+.fp-legend { margin-top: 2rem; }
+.fp-legend dt {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-top: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.fp-legend dt::before {
+  content: '';
+  width: 14px; height: 14px;
+  background: var(--swatch, var(--accent));
+  border-radius: 2px;
+}
+.fp-legend dd {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  padding-left: 1.4rem;
+  margin-top: 0.2rem;
+}
+
+/* ── Host card ─────────────────────────────────────────────────────────── */
+
+.host {
+  background: var(--bg);
+  border-top: 1px solid var(--line);
+}
+.host-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 2.4rem;
+  align-items: center;
+}
+@media (min-width: 720px) {
+  .host-card { grid-template-columns: auto 1fr auto; gap: 3rem; padding: 2.8rem 3rem; }
+}
+.host-avatar {
+  width: 96px; height: 96px;
+  border-radius: 50%;
+  background: var(--bg-alt);
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+}
+.host-avatar svg { width: 100%; height: 100%; }
+.host-meta .host-name {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.2rem;
+}
+.host-meta .host-bio {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  max-width: 40rem;
+}
+.host-stats {
+  display: flex;
+  gap: 1.6rem;
+  margin-top: 1.2rem;
+  flex-wrap: wrap;
+}
+.host-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.host-stat-num {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+.host-stat-label {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
+}
+.host-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.host-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  font-size: 0.85rem;
+  background: var(--bg);
+  transition: background .2s, border-color .2s;
+}
+.host-actions a:hover { background: var(--bg-alt); border-color: var(--line-strong); }
+
+/* ── Neighborhood ──────────────────────────────────────────────────────── */
+
+.neigh {
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+}
+.neigh-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+@media (min-width: 880px) {
+  .neigh-grid { grid-template-columns: 0.9fr 1.1fr; gap: 4rem; }
+}
+.neigh-map {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  aspect-ratio: 4 / 3;
+  position: relative;
+  overflow: hidden;
+}
+.neigh-map svg { width: 100%; height: 100%; }
+.neigh-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.neigh-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1.1rem;
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--line);
+  align-items: center;
+  cursor: pointer;
+  transition: padding .2s;
+}
+.neigh-item:last-child { border-bottom: 1px solid var(--line); }
+.neigh-item:hover { padding-left: 0.5rem; }
+.neigh-item:hover .neigh-name { color: var(--accent); }
+.neigh-icon {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--bg-alt);
+  display: grid;
+  place-items: center;
+  color: var(--ink);
+  font-size: 0.92rem;
+}
+.neigh-name {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  transition: color .2s;
+}
+.neigh-sub {
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  margin-top: 0.1rem;
+}
+.neigh-dist {
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+/* ── Booking ───────────────────────────────────────────────────────────── */
+
+.booking {
+  background: var(--ink);
+  color: var(--bg);
+}
+.booking .section-label { color: var(--accent-soft); }
+.booking .section-label::before { background: var(--accent-soft); }
+.booking .section-title { color: var(--bg); }
+.booking .section-title em { color: var(--accent-soft); }
+.booking-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+@media (min-width: 980px) {
+  .booking-grid { grid-template-columns: 0.9fr 1.1fr; gap: 4rem; }
+}
+
+.booking-info p {
+  color: rgba(244, 240, 232, 0.7);
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  max-width: 32rem;
+}
+
+.price-card {
+  background: rgba(244, 240, 232, 0.04);
+  border: 1px solid rgba(244, 240, 232, 0.12);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  margin-top: 2.4rem;
+}
+.price-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid rgba(244, 240, 232, 0.12);
+  margin-bottom: 1rem;
+}
+.price-amount {
+  font-family: var(--serif);
+  font-size: 2.6rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.price-amount sub { font-size: 1.1rem; font-weight: 400; vertical-align: baseline; }
+.price-period {
+  font-size: 0.78rem;
+  color: rgba(244, 240, 232, 0.55);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 0.4rem;
+}
+.price-detail {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  padding: 0.4rem 0;
+  color: rgba(244, 240, 232, 0.75);
+}
+.price-detail strong { color: var(--bg); font-weight: 500; }
+
+/* Booking form card */
+.booking-form {
+  background: var(--bg);
+  color: var(--ink);
+  padding: 2.2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 30px 60px -30px rgba(0,0,0,0.4);
+}
+@media (min-width: 720px) {
+  .booking-form { padding: 2.6rem; }
+}
+.form-title {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  margin-bottom: 0.3rem;
+  letter-spacing: -0.01em;
+}
+.form-sub {
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+  margin-bottom: 1.6rem;
+}
+
+/* Date picker block */
+.date-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 0.8rem;
+  background: var(--paper);
+}
+.date-cell {
+  padding: 0.95rem 1.1rem;
+  cursor: pointer;
+  position: relative;
+  transition: background .2s;
+}
+.date-cell + .date-cell { border-left: 1px solid var(--line); }
+.date-cell:hover { background: var(--bg); }
+.date-cell.active { background: var(--bg); }
+.date-cell.active::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  pointer-events: none;
+}
+.date-cell label {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
+  margin-bottom: 0.25rem;
+}
+.date-cell .date-val {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+}
+.date-cell .date-sub {
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+  margin-top: 0.1rem;
+}
+
+/* Inline calendar */
+.cal {
+  margin: 0.6rem 0 1rem;
+  padding: 1rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.cal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+.cal-month {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+.cal-nav {
+  display: flex;
+  gap: 0.3rem;
+}
+.cal-nav button {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  background: var(--bg);
+  display: grid;
+  place-items: center;
+  transition: background .15s, border-color .15s;
+}
+.cal-nav button:hover { background: var(--bg-alt); }
+.cal-nav button:disabled { opacity: 0.3; cursor: not-allowed; }
+.cal-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-mute);
+  text-align: center;
+  margin-bottom: 0.4rem;
+}
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+.cal-day {
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  font-size: 0.85rem;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  color: var(--ink);
+  transition: background .15s, color .15s;
+  font-variant-numeric: tabular-nums;
+}
+.cal-day:hover:not(.disabled):not(.empty) { background: var(--bg-alt); }
+.cal-day.disabled, .cal-day.empty {
+  color: var(--ink-mute);
+  cursor: not-allowed;
+}
+.cal-day.empty { visibility: hidden; }
+.cal-day.booked {
+  text-decoration: line-through;
+  color: var(--ink-mute);
+  cursor: not-allowed;
+}
+.cal-day.in-range { background: rgba(139,58,29,0.10); border-radius: 0; }
+.cal-day.range-start { background: var(--ink); color: var(--bg); border-radius: 50% 0 0 50%; }
+.cal-day.range-end { background: var(--ink); color: var(--bg); border-radius: 0 50% 50% 0; }
+.cal-day.range-single { background: var(--ink); color: var(--bg); border-radius: 50%; }
+
+/* Form fields */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+.form-field { display: flex; flex-direction: column; }
+.form-field-full { grid-column: 1 / -1; }
+.form-field label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
+  margin-bottom: 0.35rem;
+}
+.form-field input,
+.form-field select {
+  padding: 0.85rem 1rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  color: var(--ink);
+  transition: border-color .2s, background .2s;
+}
+.form-field input:focus,
+.form-field select:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: var(--bg);
+}
+
+.summary-box {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.2rem;
+  margin: 1.2rem 0;
+}
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  padding: 0.3rem 0;
+  color: var(--ink-soft);
+}
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  padding-top: 0.8rem;
+  margin-top: 0.4rem;
+  border-top: 1px solid var(--line);
+  color: var(--ink);
+}
+.summary-total .num { color: var(--accent); font-weight: 500; }
+
+.book-btn {
+  width: 100%;
+  padding: 1.1rem;
+  background: var(--ink);
+  color: var(--bg);
+  border: none;
+  border-radius: 100px;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: background .25s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.book-btn:hover { background: var(--accent); }
+.book-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.payment-note {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+.payment-methods {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+.pm-pill {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 0.2rem 0.45rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+}
+
+/* ── Testimonials ──────────────────────────────────────────────────────── */
+
+.testi {
+  background: var(--bg);
+  border-top: 1px solid var(--line);
+}
+.testi-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2.4rem;
+}
+.testi-track-wrap { overflow: hidden; position: relative; }
+.testi-track {
+  display: flex;
+  gap: 1.4rem;
+  transition: transform .5s cubic-bezier(.2,.7,.3,1);
+  padding-bottom: 0.5rem;
+}
+.testi-card {
+  flex: 0 0 calc(100% - 0.5rem);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+@media (min-width: 720px) {
+  .testi-card { flex: 0 0 calc(50% - 0.7rem); }
+}
+@media (min-width: 1080px) {
+  .testi-card { flex: 0 0 calc(33.333% - 1rem); }
+}
+.testi-stars { color: var(--accent); letter-spacing: 0.1em; font-size: 0.92rem; }
+.testi-quote {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  line-height: 1.4;
+  color: var(--ink);
+  text-wrap: pretty;
+  letter-spacing: -0.01em;
+  flex-grow: 1;
+}
+.testi-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--line);
+}
+.testi-avatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--bg-alt);
+  display: grid;
+  place-items: center;
+  font-family: var(--serif);
+  color: var(--accent);
+  font-weight: 500;
+  flex-shrink: 0;
+}
+.testi-name {
+  font-size: 0.94rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.testi-sub {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  margin-top: 0.1rem;
+}
+.testi-controls {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 1.8rem;
+}
+.testi-controls button {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  background: var(--paper);
+  display: grid;
+  place-items: center;
+  transition: background .15s, transform .15s;
+}
+.testi-controls button:hover { background: var(--bg-alt); }
+.testi-controls button:active { transform: scale(0.96); }
+.testi-controls button:disabled { opacity: 0.35; cursor: not-allowed; }
+
+/* ── Rules ─────────────────────────────────────────────────────────────── */
+
+.rules {
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+}
+.rules-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+@media (min-width: 880px) {
+  .rules-grid { grid-template-columns: 0.85fr 1.15fr; gap: 5rem; }
+}
+.rule-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem;
+}
+.rule-card {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.3rem;
+}
+.rule-card .rc-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-soft);
+  margin-bottom: 0.4rem;
+}
+.rule-card .rc-val {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+}
+.rule-card .rc-sub {
+  font-size: 0.84rem;
+  color: var(--ink-soft);
+  margin-top: 0.3rem;
+}
+.rule-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1.4rem;
+}
+.rule-list li {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 0.7rem;
+  font-size: 0.92rem;
+  color: var(--ink);
+  align-items: baseline;
+}
+.rule-list li::before {
+  content: '';
+  width: 5px; height: 5px;
+  background: var(--accent);
+  border-radius: 50%;
+  margin-top: 0.55rem;
+}
+
+/* ── FAQ ───────────────────────────────────────────────────────────────── */
+
+.faq {
+  background: var(--bg);
+  border-top: 1px solid var(--line);
+}
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+@media (min-width: 880px) {
+  .faq-grid { grid-template-columns: 0.6fr 1fr; gap: 5rem; }
+}
+.faq-list {
+  display: flex;
+  flex-direction: column;
+}
+.faq-item {
+  border-top: 1px solid var(--line);
+  padding: 1.4rem 0;
+  cursor: pointer;
+}
+.faq-item:last-child { border-bottom: 1px solid var(--line); }
+.faq-q {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+  transition: color .2s;
+}
+.faq-item:hover .faq-q { color: var(--accent); }
+.faq-toggle {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  transition: transform .3s ease, background .2s, border-color .2s;
+  font-size: 0.85rem;
+  line-height: 1;
+}
+.faq-item.open .faq-toggle {
+  transform: rotate(45deg);
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--bg);
+}
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease, padding .25s;
+  color: var(--ink-soft);
+  font-size: 0.96rem;
+  line-height: 1.7;
+  max-width: 56ch;
+}
+.faq-item.open .faq-a {
+  max-height: 220px;
+  padding-top: 0.9rem;
+}
+
+/* ── Trust ─────────────────────────────────────────────────────────────── */
+
+.trust {
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+  text-align: center;
+  padding: 5rem 0;
+}
+.trust-title {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+.trust-sub {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  margin-bottom: 3rem;
+}
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  max-width: 920px;
+  margin: 0 auto;
+}
+.trust-item { text-align: left; padding-top: 1.4rem; border-top: 1px solid var(--line); }
+.trust-num {
+  font-family: var(--serif);
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: var(--accent);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.trust-label {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin-top: 0.4rem;
+  text-wrap: balance;
+}
+
+/* ── Footer ────────────────────────────────────────────────────────────── */
+
+footer {
+  background: var(--ink);
+  color: rgba(244, 240, 232, 0.6);
+  padding: 4rem 0 2rem;
+}
+.foot-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(244, 240, 232, 0.1);
+}
+@media (min-width: 720px) {
+  .foot-grid { grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 3rem; }
+}
+.foot-brand {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  color: var(--bg);
+  margin-bottom: 0.7rem;
+  letter-spacing: -0.01em;
+}
+.foot-brand em { color: var(--accent-soft); font-style: italic; }
+.foot-tag { font-size: 0.92rem; line-height: 1.6; max-width: 28rem; }
+.foot-h {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(244, 240, 232, 0.4);
+  margin-bottom: 1rem;
+}
+.foot-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  font-size: 0.92rem;
+}
+.foot-list a:hover { color: var(--bg); }
+.foot-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.74rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(244, 240, 232, 0.35);
+  padding-top: 2rem;
+}
+
+/* ── Sticky mobile booking widget ──────────────────────────────────────── */
+
+.sticky-book {
+  position: fixed;
+  bottom: 16px;
+  left: 16px; right: 16px;
+  z-index: 60;
+  background: var(--ink);
+  color: var(--bg);
+  border-radius: 100px;
+  padding: 0.7rem 0.85rem 0.7rem 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  box-shadow: 0 12px 30px -10px rgba(0,0,0,0.4);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: opacity .35s ease, transform .35s ease;
+}
+.sticky-book.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.sticky-book .sb-price {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+}
+.sticky-book .sb-sub {
+  font-size: 0.7rem;
+  color: rgba(244,240,232,0.55);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.sticky-book button {
+  padding: 0.7rem 1.3rem;
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  border-radius: 100px;
+  font-weight: 500;
+  font-size: 0.88rem;
+  transition: background .2s;
+}
+.sticky-book button:hover { background: var(--accent-soft); }
+@media (min-width: 880px) {
+  .sticky-book { display: none; }
+}
+
+/* ── WhatsApp floating CTA ─────────────────────────────────────────────── */
+
+.wa-fab {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 55;
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: #1f8a5b;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  box-shadow: 0 10px 28px -8px rgba(0,0,0,0.4), 0 0 0 0 rgba(31,138,91,0.5);
+  animation: wa-pulse 2.6s infinite;
+  transition: transform .2s;
+}
+.wa-fab:hover { transform: scale(1.06); }
+@keyframes wa-pulse {
+  0% { box-shadow: 0 10px 28px -8px rgba(0,0,0,0.4), 0 0 0 0 rgba(31,138,91,0.45); }
+  70% { box-shadow: 0 10px 28px -8px rgba(0,0,0,0.4), 0 0 0 14px rgba(31,138,91,0); }
+  100% { box-shadow: 0 10px 28px -8px rgba(0,0,0,0.4), 0 0 0 0 rgba(31,138,91,0); }
+}
+@media (max-width: 879px) {
+  .wa-fab { bottom: 80px; }   /* sit above sticky book */
+}
+
+/* ── Lightbox ──────────────────────────────────────────────────────────── */
+
+.lb-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 18, 14, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease;
+}
+.lb-backdrop.open { opacity: 1; pointer-events: auto; }
+.lb-frame {
+  width: 100%;
+  max-width: 1100px;
+  background: var(--paper);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 16 / 10;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+  transform: scale(0.96);
+  transition: transform .3s ease;
+}
+.lb-backdrop.open .lb-frame { transform: scale(1); }
+.lb-frame svg { width: 100%; height: 100%; display: block; }
+.lb-cap {
+  position: absolute;
+  left: 1.6rem;
+  bottom: 1.4rem;
+  color: var(--bg);
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  letter-spacing: -0.01em;
+  text-shadow: 0 1px 14px rgba(0,0,0,0.5);
+}
+.lb-close, .lb-nav {
+  position: absolute;
+  background: rgba(255,255,255,0.92);
+  border: none;
+  border-radius: 50%;
+  width: 44px; height: 44px;
+  display: grid;
+  place-items: center;
+  transition: background .2s;
+  z-index: 5;
+}
+.lb-close:hover, .lb-nav:hover { background: #fff; }
+.lb-close { top: -56px; right: 0; }
+.lb-prev { top: 50%; left: -64px; transform: translateY(-50%); }
+.lb-next { top: 50%; right: -64px; transform: translateY(-50%); }
+@media (max-width: 880px) {
+  .lb-prev { left: 8px; }
+  .lb-next { right: 8px; }
+  .lb-close { top: -52px; right: 8px; }
+}
+.lb-counter {
+  position: absolute;
+  top: -52px;
+  left: 0;
+  color: rgba(244,240,232,0.6);
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ── Midtrans payment modal ────────────────────────────────────────────── */
+
+.mt-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 18, 14, 0.78);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 220;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease;
+  overflow-y: auto;
+}
+.mt-backdrop.open { opacity: 1; pointer-events: auto; }
+.mt-modal {
+  width: 100%;
+  max-width: 460px;
+  background: var(--bg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transform: scale(0.96) translateY(10px);
+  transition: transform .3s ease;
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,0.5);
+}
+.mt-backdrop.open .mt-modal { transform: scale(1) translateY(0); }
+.mt-head {
+  background: var(--ink);
+  color: var(--bg);
+  padding: 1.4rem 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mt-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 500;
+  font-size: 0.94rem;
+}
+.mt-brand .mt-logo {
+  width: 28px; height: 28px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #009ff2 0%, #20c997 100%);
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.mt-close {
+  width: 28px; height: 28px;
+  background: rgba(255,255,255,0.08);
+  border: none;
+  border-radius: 50%;
+  color: var(--bg);
+  display: grid;
+  place-items: center;
+}
+.mt-body {
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.mt-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1.1rem 1.2rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.mt-amount .mt-label {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
+}
+.mt-amount .mt-val {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  line-height: 1;
+  margin-top: 0.2rem;
+}
+.mt-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.mt-method {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.95rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: border-color .2s, background .2s;
+  background: var(--paper);
+}
+.mt-method:hover { border-color: var(--accent); background: var(--bg); }
+.mt-method.selected { border-color: var(--ink); }
+.mt-method-left {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+.mt-method-icon {
+  width: 36px; height: 36px;
+  border-radius: 6px;
+  background: var(--bg-alt);
+  display: grid;
+  place-items: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.mt-method-name {
+  font-size: 0.94rem;
+  font-weight: 500;
+}
+.mt-method-sub {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  margin-top: 0.1rem;
+}
+.mt-method .mt-check {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  display: grid;
+  place-items: center;
+}
+.mt-method.selected .mt-check {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--bg);
+}
+.mt-pay-btn {
+  width: 100%;
+  padding: 1rem;
+  background: var(--ink);
+  color: var(--bg);
+  border: none;
+  border-radius: 100px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background .2s;
+}
+.mt-pay-btn:hover { background: var(--accent); }
+.mt-pay-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* QRIS step */
+.mt-qr-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0 0;
+}
+.mt-qr {
+  width: 220px; height: 220px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px;
+  position: relative;
+}
+.mt-qr svg { width: 100%; height: 100%; }
+.mt-timer {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  letter-spacing: -0.01em;
+  color: var(--accent);
+}
+
+/* Success step */
+.mt-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 0 0.4rem;
+  text-align: center;
+}
+.mt-success .mt-check-big {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: #1f8a5b;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  animation: pop .35s cubic-bezier(.2,.7,.3,1.4);
+  margin-bottom: 0.4rem;
+}
+@keyframes pop {
+  from { transform: scale(0.4); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.mt-success h3 {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  letter-spacing: -0.01em;
+}
+.mt-success p {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  max-width: 28rem;
+}
+
+/* ── Reveal animations ────────────────────────────────────────────────── */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .9s cubic-bezier(.2,.7,.3,1), transform .9s cubic-bezier(.2,.7,.3,1);
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: .08s; }
+.reveal-delay-2 { transition-delay: .16s; }
+.reveal-delay-3 { transition-delay: .24s; }
+
+/* respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+</style>
 </head>
-<body>
+<body data-variant="minimal">
+<div id="root"></div>
 
-<nav class="nav">
-    <div class="brand">Casa <span>Riviera</span></div>
-    <div class="nav-meta">Meikarta · D2 · 2BR</div>
-</nav>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 
-<!-- ───────── HERO ───────── -->
-<section class="hero">
-    <div class="hero-content">
-        <div class="hero-tag">Premium Stay · Cikarang</div>
-        <h1>Tinggal seperti di <em>rumah</em>, dengan layanan hotel.</h1>
-        <p class="lead">2BR apartemen modern di tower Riviera District 2 Meikarta. Fully furnished, panoramic city view, akses langsung ke Central Park & Lippo Mall.</p>
+<script type="text/babel" data-presets="react">
+const { useState, useEffect, useRef, useMemo, useCallback } = React;
 
-        <div class="hero-meta">
-            <div class="hero-meta-item">
-                <span class="hero-meta-label">Kamar</span>
-                <span class="hero-meta-value serif">2 BR</span>
-            </div>
-            <div class="hero-meta-item">
-                <span class="hero-meta-label">Luas</span>
-                <span class="hero-meta-value serif">48 m²</span>
-            </div>
-            <div class="hero-meta-item">
-                <span class="hero-meta-label">Kapasitas</span>
-                <span class="hero-meta-value serif">4 tamu</span>
-            </div>
-            <div class="hero-meta-item">
-                <span class="hero-meta-label">Floor</span>
-                <span class="hero-meta-value serif">High</span>
-            </div>
+
+// tweaks-panel.jsx
+// Reusable Tweaks shell + form-control helpers.
+//
+// Owns the host protocol (listens for __activate_edit_mode / __deactivate_edit_mode,
+// posts __edit_mode_available / __edit_mode_set_keys / __edit_mode_dismissed) so
+// individual prototypes don't re-roll it. Ships a consistent set of controls so you
+// don't hand-draw <input type="range">, segmented radios, steppers, etc.
+//
+// Usage (in an HTML file that loads React + Babel):
+//
+//   const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+//     "primaryColor": "#D97757",
+//     "palette": ["#D97757", "#29261b", "#f6f4ef"],
+//     "fontSize": 16,
+//     "density": "regular",
+//     "dark": false
+//   }/*EDITMODE-END*/;
+//
+//   function App() {
+//     const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+//     return (
+//       <div style={{ fontSize: t.fontSize, color: t.primaryColor }}>
+//         Hello
+//         <TweaksPanel>
+//           <TweakSection label="Typography" />
+//           <TweakSlider label="Font size" value={t.fontSize} min={10} max={32} unit="px"
+//                        onChange={(v) => setTweak('fontSize', v)} />
+//           <TweakRadio  label="Density" value={t.density}
+//                        options={['compact', 'regular', 'comfy']}
+//                        onChange={(v) => setTweak('density', v)} />
+//           <TweakSection label="Theme" />
+//           <TweakColor  label="Primary" value={t.primaryColor}
+//                        options={['#D97757', '#2A6FDB', '#1F8A5B', '#7A5AE0']}
+//                        onChange={(v) => setTweak('primaryColor', v)} />
+//           <TweakColor  label="Palette" value={t.palette}
+//                        options={[['#D97757', '#29261b', '#f6f4ef'],
+//                                  ['#475569', '#0f172a', '#f1f5f9']]}
+//                        onChange={(v) => setTweak('palette', v)} />
+//           <TweakToggle label="Dark mode" value={t.dark}
+//                        onChange={(v) => setTweak('dark', v)} />
+//         </TweaksPanel>
+//       </div>
+//     );
+//   }
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
+const __TWEAKS_STYLE = `
+  .twk-panel{position:fixed;right:16px;bottom:16px;z-index:2147483646;width:280px;
+    max-height:calc(100vh - 32px);display:flex;flex-direction:column;
+    transform:scale(var(--dc-inv-zoom,1));transform-origin:bottom right;
+    background:rgba(250,249,247,.78);color:#29261b;
+    -webkit-backdrop-filter:blur(24px) saturate(160%);backdrop-filter:blur(24px) saturate(160%);
+    border:.5px solid rgba(255,255,255,.6);border-radius:14px;
+    box-shadow:0 1px 0 rgba(255,255,255,.5) inset,0 12px 40px rgba(0,0,0,.18);
+    font:11.5px/1.4 ui-sans-serif,system-ui,-apple-system,sans-serif;overflow:hidden}
+  .twk-hd{display:flex;align-items:center;justify-content:space-between;
+    padding:10px 8px 10px 14px;cursor:move;user-select:none}
+  .twk-hd b{font-size:12px;font-weight:600;letter-spacing:.01em}
+  .twk-x{appearance:none;border:0;background:transparent;color:rgba(41,38,27,.55);
+    width:22px;height:22px;border-radius:6px;cursor:default;font-size:13px;line-height:1}
+  .twk-x:hover{background:rgba(0,0,0,.06);color:#29261b}
+  .twk-body{padding:2px 14px 14px;display:flex;flex-direction:column;gap:10px;
+    overflow-y:auto;overflow-x:hidden;min-height:0;
+    scrollbar-width:thin;scrollbar-color:rgba(0,0,0,.15) transparent}
+  .twk-body::-webkit-scrollbar{width:8px}
+  .twk-body::-webkit-scrollbar-track{background:transparent;margin:2px}
+  .twk-body::-webkit-scrollbar-thumb{background:rgba(0,0,0,.15);border-radius:4px;
+    border:2px solid transparent;background-clip:content-box}
+  .twk-body::-webkit-scrollbar-thumb:hover{background:rgba(0,0,0,.25);
+    border:2px solid transparent;background-clip:content-box}
+  .twk-row{display:flex;flex-direction:column;gap:5px}
+  .twk-row-h{flex-direction:row;align-items:center;justify-content:space-between;gap:10px}
+  .twk-lbl{display:flex;justify-content:space-between;align-items:baseline;
+    color:rgba(41,38,27,.72)}
+  .twk-lbl>span:first-child{font-weight:500}
+  .twk-val{color:rgba(41,38,27,.5);font-variant-numeric:tabular-nums}
+
+  .twk-sect{font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+    color:rgba(41,38,27,.45);padding:10px 0 0}
+  .twk-sect:first-child{padding-top:0}
+
+  .twk-field{appearance:none;box-sizing:border-box;width:100%;min-width:0;height:26px;padding:0 8px;
+    border:.5px solid rgba(0,0,0,.1);border-radius:7px;
+    background:rgba(255,255,255,.6);color:inherit;font:inherit;outline:none}
+  .twk-field:focus{border-color:rgba(0,0,0,.25);background:rgba(255,255,255,.85)}
+  select.twk-field{padding-right:22px;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='rgba(0,0,0,.5)' d='M0 0h10L5 6z'/></svg>");
+    background-repeat:no-repeat;background-position:right 8px center}
+
+  .twk-slider{appearance:none;-webkit-appearance:none;width:100%;height:4px;margin:6px 0;
+    border-radius:999px;background:rgba(0,0,0,.12);outline:none}
+  .twk-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;
+    width:14px;height:14px;border-radius:50%;background:#fff;
+    border:.5px solid rgba(0,0,0,.12);box-shadow:0 1px 3px rgba(0,0,0,.2);cursor:default}
+  .twk-slider::-moz-range-thumb{width:14px;height:14px;border-radius:50%;
+    background:#fff;border:.5px solid rgba(0,0,0,.12);box-shadow:0 1px 3px rgba(0,0,0,.2);cursor:default}
+
+  .twk-seg{position:relative;display:flex;padding:2px;border-radius:8px;
+    background:rgba(0,0,0,.06);user-select:none}
+  .twk-seg-thumb{position:absolute;top:2px;bottom:2px;border-radius:6px;
+    background:rgba(255,255,255,.9);box-shadow:0 1px 2px rgba(0,0,0,.12);
+    transition:left .15s cubic-bezier(.3,.7,.4,1),width .15s}
+  .twk-seg.dragging .twk-seg-thumb{transition:none}
+  .twk-seg button{appearance:none;position:relative;z-index:1;flex:1;border:0;
+    background:transparent;color:inherit;font:inherit;font-weight:500;min-height:22px;
+    border-radius:6px;cursor:default;padding:4px 6px;line-height:1.2;
+    overflow-wrap:anywhere}
+
+  .twk-toggle{position:relative;width:32px;height:18px;border:0;border-radius:999px;
+    background:rgba(0,0,0,.15);transition:background .15s;cursor:default;padding:0}
+  .twk-toggle[data-on="1"]{background:#34c759}
+  .twk-toggle i{position:absolute;top:2px;left:2px;width:14px;height:14px;border-radius:50%;
+    background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.25);transition:transform .15s}
+  .twk-toggle[data-on="1"] i{transform:translateX(14px)}
+
+  .twk-num{display:flex;align-items:center;box-sizing:border-box;min-width:0;height:26px;padding:0 0 0 8px;
+    border:.5px solid rgba(0,0,0,.1);border-radius:7px;background:rgba(255,255,255,.6)}
+  .twk-num-lbl{font-weight:500;color:rgba(41,38,27,.6);cursor:ew-resize;
+    user-select:none;padding-right:8px}
+  .twk-num input{flex:1;min-width:0;height:100%;border:0;background:transparent;
+    font:inherit;font-variant-numeric:tabular-nums;text-align:right;padding:0 8px 0 0;
+    outline:none;color:inherit;-moz-appearance:textfield}
+  .twk-num input::-webkit-inner-spin-button,.twk-num input::-webkit-outer-spin-button{
+    -webkit-appearance:none;margin:0}
+  .twk-num-unit{padding-right:8px;color:rgba(41,38,27,.45)}
+
+  .twk-btn{appearance:none;height:26px;padding:0 12px;border:0;border-radius:7px;
+    background:rgba(0,0,0,.78);color:#fff;font:inherit;font-weight:500;cursor:default}
+  .twk-btn:hover{background:rgba(0,0,0,.88)}
+  .twk-btn.secondary{background:rgba(0,0,0,.06);color:inherit}
+  .twk-btn.secondary:hover{background:rgba(0,0,0,.1)}
+
+  .twk-swatch{appearance:none;-webkit-appearance:none;width:56px;height:22px;
+    border:.5px solid rgba(0,0,0,.1);border-radius:6px;padding:0;cursor:default;
+    background:transparent;flex-shrink:0}
+  .twk-swatch::-webkit-color-swatch-wrapper{padding:0}
+  .twk-swatch::-webkit-color-swatch{border:0;border-radius:5.5px}
+  .twk-swatch::-moz-color-swatch{border:0;border-radius:5.5px}
+
+  .twk-chips{display:flex;gap:6px}
+  .twk-chip{position:relative;appearance:none;flex:1;min-width:0;height:46px;
+    padding:0;border:0;border-radius:6px;overflow:hidden;cursor:default;
+    box-shadow:0 0 0 .5px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.06);
+    transition:transform .12s cubic-bezier(.3,.7,.4,1),box-shadow .12s}
+  .twk-chip:hover{transform:translateY(-1px);
+    box-shadow:0 0 0 .5px rgba(0,0,0,.18),0 4px 10px rgba(0,0,0,.12)}
+  .twk-chip[data-on="1"]{box-shadow:0 0 0 1.5px rgba(0,0,0,.85),
+    0 2px 6px rgba(0,0,0,.15)}
+  .twk-chip>span{position:absolute;top:0;bottom:0;right:0;width:34%;
+    display:flex;flex-direction:column;box-shadow:-1px 0 0 rgba(0,0,0,.1)}
+  .twk-chip>span>i{flex:1;box-shadow:0 -1px 0 rgba(0,0,0,.1)}
+  .twk-chip>span>i:first-child{box-shadow:none}
+  .twk-chip svg{position:absolute;top:6px;left:6px;width:13px;height:13px;
+    filter:drop-shadow(0 1px 1px rgba(0,0,0,.3))}
+`;
+
+// ── useTweaks ───────────────────────────────────────────────────────────────
+// Single source of truth for tweak values. setTweak persists via the host
+// (__edit_mode_set_keys → host rewrites the EDITMODE block on disk).
+function useTweaks(defaults) {
+  const [values, setValues] = React.useState(defaults);
+  // Accepts either setTweak('key', value) or setTweak({ key: value, ... }) so a
+  // useState-style call doesn't write a "[object Object]" key into the persisted
+  // JSON block.
+  const setTweak = React.useCallback((keyOrEdits, val) => {
+    const edits = typeof keyOrEdits === 'object' && keyOrEdits !== null
+      ? keyOrEdits : { [keyOrEdits]: val };
+    setValues((prev) => ({ ...prev, ...edits }));
+    window.parent.postMessage({ type: '__edit_mode_set_keys', edits }, '*');
+    // Same-window signal so in-page listeners (deck-stage rail thumbnails)
+    // can react — the parent message only reaches the host, not peers.
+    window.dispatchEvent(new CustomEvent('tweakchange', { detail: edits }));
+  }, []);
+  return [values, setTweak];
+}
+
+// ── TweaksPanel ─────────────────────────────────────────────────────────────
+// Floating shell. Registers the protocol listener BEFORE announcing
+// availability — if the announce ran first, the host's activate could land
+// before our handler exists and the toolbar toggle would silently no-op.
+// The close button posts __edit_mode_dismissed so the host's toolbar toggle
+// flips off in lockstep; the host echoes __deactivate_edit_mode back which
+// is what actually hides the panel.
+function TweaksPanel({ title = 'Tweaks', noDeckControls = false, children }) {
+  const [open, setOpen] = React.useState(false);
+  const dragRef = React.useRef(null);
+  // Auto-inject a rail toggle when a <deck-stage> is on the page. The
+  // toggle drives the deck's per-viewer _railVisible via window message;
+  // state is mirrored from the same localStorage key the deck reads so
+  // the control reflects reality across reloads. The mechanism is the
+  // message — authors who want custom placement can post it directly
+  // and pass noDeckControls to suppress this one.
+  const hasDeckStage = React.useMemo(
+    () => typeof document !== 'undefined' && !!document.querySelector('deck-stage'),
+    [],
+  );
+  // deck-stage enables its rail in connectedCallback, but this panel can
+  // mount before that element has upgraded. The initial read catches the
+  // common case; the listener covers mounting first. (Older deck-stage.js
+  // copies still wait for the host's __omelette_rail_enabled postMessage —
+  // same listener handles those.)
+  const [railEnabled, setRailEnabled] = React.useState(
+    () => hasDeckStage && !!document.querySelector('deck-stage')?._railEnabled,
+  );
+  React.useEffect(() => {
+    if (!hasDeckStage || railEnabled) return undefined;
+    const onMsg = (e) => {
+      if (e.data && e.data.type === '__omelette_rail_enabled') setRailEnabled(true);
+    };
+    window.addEventListener('message', onMsg);
+    return () => window.removeEventListener('message', onMsg);
+  }, [hasDeckStage, railEnabled]);
+  const [railVisible, setRailVisible] = React.useState(() => {
+    try { return localStorage.getItem('deck-stage.railVisible') !== '0'; } catch (e) { return true; }
+  });
+  const toggleRail = (on) => {
+    setRailVisible(on);
+    window.postMessage({ type: '__deck_rail_visible', on }, '*');
+  };
+  const offsetRef = React.useRef({ x: 16, y: 16 });
+  const PAD = 16;
+
+  const clampToViewport = React.useCallback(() => {
+    const panel = dragRef.current;
+    if (!panel) return;
+    const w = panel.offsetWidth, h = panel.offsetHeight;
+    const maxRight = Math.max(PAD, window.innerWidth - w - PAD);
+    const maxBottom = Math.max(PAD, window.innerHeight - h - PAD);
+    offsetRef.current = {
+      x: Math.min(maxRight, Math.max(PAD, offsetRef.current.x)),
+      y: Math.min(maxBottom, Math.max(PAD, offsetRef.current.y)),
+    };
+    panel.style.right = offsetRef.current.x + 'px';
+    panel.style.bottom = offsetRef.current.y + 'px';
+  }, []);
+
+  React.useEffect(() => {
+    if (!open) return;
+    clampToViewport();
+    if (typeof ResizeObserver === 'undefined') {
+      window.addEventListener('resize', clampToViewport);
+      return () => window.removeEventListener('resize', clampToViewport);
+    }
+    const ro = new ResizeObserver(clampToViewport);
+    ro.observe(document.documentElement);
+    return () => ro.disconnect();
+  }, [open, clampToViewport]);
+
+  React.useEffect(() => {
+    const onMsg = (e) => {
+      const t = e?.data?.type;
+      if (t === '__activate_edit_mode') setOpen(true);
+      else if (t === '__deactivate_edit_mode') setOpen(false);
+    };
+    window.addEventListener('message', onMsg);
+    window.parent.postMessage({ type: '__edit_mode_available' }, '*');
+    return () => window.removeEventListener('message', onMsg);
+  }, []);
+
+  const dismiss = () => {
+    setOpen(false);
+    window.parent.postMessage({ type: '__edit_mode_dismissed' }, '*');
+  };
+
+  const onDragStart = (e) => {
+    const panel = dragRef.current;
+    if (!panel) return;
+    const r = panel.getBoundingClientRect();
+    const sx = e.clientX, sy = e.clientY;
+    const startRight = window.innerWidth - r.right;
+    const startBottom = window.innerHeight - r.bottom;
+    const move = (ev) => {
+      offsetRef.current = {
+        x: startRight - (ev.clientX - sx),
+        y: startBottom - (ev.clientY - sy),
+      };
+      clampToViewport();
+    };
+    const up = () => {
+      window.removeEventListener('mousemove', move);
+      window.removeEventListener('mouseup', up);
+    };
+    window.addEventListener('mousemove', move);
+    window.addEventListener('mouseup', up);
+  };
+
+  if (!open) return null;
+  return (
+    <>
+      <style>{__TWEAKS_STYLE}</style>
+      <div ref={dragRef} className="twk-panel" data-noncommentable=""
+           style={{ right: offsetRef.current.x, bottom: offsetRef.current.y }}>
+        <div className="twk-hd" onMouseDown={onDragStart}>
+          <b>{title}</b>
+          <button className="twk-x" aria-label="Close tweaks"
+                  onMouseDown={(e) => e.stopPropagation()}
+                  onClick={dismiss}>✕</button>
         </div>
-
-        <div class="cta-row">
-            <a href="#booking" class="btn btn-primary">Cek Ketersediaan <span class="btn-arrow">→</span></a>
-            <a href="#gallery" class="btn btn-secondary">Lihat Galeri</a>
+        <div className="twk-body">
+          {children}
+          {hasDeckStage && railEnabled && !noDeckControls && (
+            <TweakSection label="Deck">
+              <TweakToggle label="Thumbnail rail" value={railVisible} onChange={toggleRail} />
+            </TweakSection>
+          )}
         </div>
+      </div>
+    </>
+  );
+}
+
+// ── Layout helpers ──────────────────────────────────────────────────────────
+
+function TweakSection({ label, children }) {
+  return (
+    <>
+      <div className="twk-sect">{label}</div>
+      {children}
+    </>
+  );
+}
+
+function TweakRow({ label, value, children, inline = false }) {
+  return (
+    <div className={inline ? 'twk-row twk-row-h' : 'twk-row'}>
+      <div className="twk-lbl">
+        <span>{label}</span>
+        {value != null && <span className="twk-val">{value}</span>}
+      </div>
+      {children}
     </div>
+  );
+}
 
-    <div class="hero-gallery">
-        <div class="hero-img hero-img-main">
-            <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stop-color="#d6c5a8"/>
-                        <stop offset="50%" stop-color="#c8a577"/>
-                        <stop offset="100%" stop-color="#8b6539"/>
-                    </linearGradient>
-                    <linearGradient id="room1" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stop-color="#f4f0e8"/>
-                        <stop offset="100%" stop-color="#d4c9b3"/>
-                    </linearGradient>
-                </defs>
-                <!-- room interior -->
-                <rect width="400" height="400" fill="url(#room1)"/>
-                <!-- window with city view -->
-                <rect x="40" y="60" width="320" height="240" fill="url(#sky1)"/>
-                <!-- city skyline -->
-                <g fill="#4a3d2e" opacity="0.7">
-                    <rect x="50" y="200" width="40" height="100"/>
-                    <rect x="100" y="170" width="50" height="130"/>
-                    <rect x="160" y="190" width="35" height="110"/>
-                    <rect x="200" y="150" width="60" height="150"/>
-                    <rect x="265" y="180" width="40" height="120"/>
-                    <rect x="310" y="200" width="45" height="100"/>
-                </g>
-                <!-- window frame -->
-                <line x1="200" y1="60" x2="200" y2="300" stroke="#1c1c1a" stroke-width="3" opacity="0.4"/>
-                <line x1="40" y1="180" x2="360" y2="180" stroke="#1c1c1a" stroke-width="3" opacity="0.4"/>
-                <rect x="40" y="60" width="320" height="240" fill="none" stroke="#1c1c1a" stroke-width="4" opacity="0.5"/>
-                <!-- sofa -->
-                <rect x="80" y="320" width="240" height="50" rx="6" fill="#8b6e4e"/>
-                <rect x="80" y="305" width="240" height="20" rx="6" fill="#a08361"/>
-                <!-- coffee table -->
-                <rect x="160" y="370" width="80" height="20" rx="3" fill="#3d2f1f"/>
-            </svg>
-        </div>
-        <div class="hero-img">
-            <svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                <rect width="200" height="200" fill="#e8dcc4"/>
-                <!-- bed -->
-                <rect x="30" y="80" width="140" height="80" rx="4" fill="#fbf8f2"/>
-                <rect x="30" y="80" width="140" height="20" fill="#d4c9b3"/>
-                <rect x="50" y="55" width="100" height="35" rx="6" fill="#8b6e4e"/>
-                <!-- pillows -->
-                <rect x="45" y="85" width="40" height="20" rx="3" fill="#e8dcc4"/>
-                <rect x="115" y="85" width="40" height="20" rx="3" fill="#e8dcc4"/>
-                <!-- lamp -->
-                <circle cx="40" cy="50" r="8" fill="#c08c4c"/>
-                <line x1="40" y1="58" x2="40" y2="80" stroke="#3d2f1f" stroke-width="2"/>
-            </svg>
-        </div>
-        <div class="hero-img">
-            <svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                <rect width="200" height="200" fill="#d4c9b3"/>
-                <!-- kitchen counter -->
-                <rect x="0" y="120" width="200" height="80" fill="#1c1c1a"/>
-                <rect x="0" y="115" width="200" height="10" fill="#fbf8f2"/>
-                <!-- cabinets above -->
-                <rect x="20" y="30" width="50" height="60" fill="#8b6e4e"/>
-                <rect x="80" y="30" width="50" height="60" fill="#8b6e4e"/>
-                <rect x="140" y="30" width="50" height="60" fill="#8b6e4e"/>
-                <line x1="45" y1="30" x2="45" y2="90" stroke="#fbf8f2" stroke-width="1"/>
-                <line x1="105" y1="30" x2="105" y2="90" stroke="#fbf8f2" stroke-width="1"/>
-                <line x1="165" y1="30" x2="165" y2="90" stroke="#fbf8f2" stroke-width="1"/>
-                <!-- pendant lights -->
-                <line x1="60" y1="0" x2="60" y2="20" stroke="#3d2f1f" stroke-width="1"/>
-                <circle cx="60" cy="22" r="6" fill="#c08c4c"/>
-                <line x1="140" y1="0" x2="140" y2="20" stroke="#3d2f1f" stroke-width="1"/>
-                <circle cx="140" cy="22" r="6" fill="#c08c4c"/>
-            </svg>
-        </div>
+// ── Controls ────────────────────────────────────────────────────────────────
+
+function TweakSlider({ label, value, min = 0, max = 100, step = 1, unit = '', onChange }) {
+  return (
+    <TweakRow label={label} value={`${value}${unit}`}>
+      <input type="range" className="twk-slider" min={min} max={max} step={step}
+             value={value} onChange={(e) => onChange(Number(e.target.value))} />
+    </TweakRow>
+  );
+}
+
+function TweakToggle({ label, value, onChange }) {
+  return (
+    <div className="twk-row twk-row-h">
+      <div className="twk-lbl"><span>{label}</span></div>
+      <button type="button" className="twk-toggle" data-on={value ? '1' : '0'}
+              role="switch" aria-checked={!!value}
+              onClick={() => onChange(!value)}><i /></button>
     </div>
-</section>
+  );
+}
 
-<!-- ───────── ABOUT ───────── -->
-<section class="about" id="about">
-    <div class="about-grid">
-        <div>
-            <div class="section-label">Tentang Unit</div>
-            <h2 class="section-title">Tempat singgah <em>yang terasa</em> seperti rumah sendiri.</h2>
-        </div>
-        <div class="about-text">
-            <p>Setiap detail di Casa Riviera dirancang untuk memberikan pengalaman tinggal yang tenang dan nyaman. Cocok untuk keluarga yang berlibur, pasangan yang ingin getaway, atau profesional yang butuh tempat singgah berkelas selama perjalanan bisnis ke Cikarang.</p>
-            <p>Unit 2BR ini fully furnished dengan furniture pilihan, dilengkapi smart TV, full kitchen, mesin cuci, dan akses langsung ke seluruh amenities tower Riviera District 2.</p>
+function TweakRadio({ label, value, options, onChange }) {
+  const trackRef = React.useRef(null);
+  const [dragging, setDragging] = React.useState(false);
+  // The active value is read by pointer-move handlers attached for the lifetime
+  // of a drag — ref it so a stale closure doesn't fire onChange for every move.
+  const valueRef = React.useRef(value);
+  valueRef.current = value;
 
-            <ul class="feature-list">
-                <li><strong>2 Kamar Tidur</strong><span>Master + 2nd room, AC keduanya</span></li>
-                <li><strong>Full Kitchen</strong><span>Kompor, kulkas, microwave</span></li>
-                <li><strong>Smart TV</strong><span>Netflix, YouTube ready</span></li>
-                <li><strong>Mesin Cuci</strong><span>In-unit, free deterjen</span></li>
-                <li><strong>Free WiFi</strong><span>Fiber 100 Mbps</span></li>
-                <li><strong>Pool & Gym</strong><span>Free akses tower</span></li>
-            </ul>
-        </div>
+  // Segments wrap mid-word once per-segment width runs out. The track is
+  // ~248px (280 panel − 28 body pad − 4 seg pad), each button loses 12px
+  // to its own padding, and 11.5px system-ui averages ~6.3px/char — so 2
+  // options fit ~16 chars each, 3 fit ~10. Past that (or >3 options), fall
+  // back to a dropdown rather than wrap.
+  const labelLen = (o) => String(typeof o === 'object' ? o.label : o).length;
+  const maxLen = options.reduce((m, o) => Math.max(m, labelLen(o)), 0);
+  const fitsAsSegments = maxLen <= ({ 2: 16, 3: 10 }[options.length] ?? 0);
+  if (!fitsAsSegments) {
+    // <select> emits strings — map back to the original option value so the
+    // fallback stays type-preserving (numbers, booleans) like the segment path.
+    const resolve = (s) => {
+      const m = options.find((o) => String(typeof o === 'object' ? o.value : o) === s);
+      return m === undefined ? s : typeof m === 'object' ? m.value : m;
+    };
+    return <TweakSelect label={label} value={value} options={options}
+                        onChange={(s) => onChange(resolve(s))} />;
+  }
+  const opts = options.map((o) => (typeof o === 'object' ? o : { value: o, label: o }));
+  const idx = Math.max(0, opts.findIndex((o) => o.value === value));
+  const n = opts.length;
+
+  const segAt = (clientX) => {
+    const r = trackRef.current.getBoundingClientRect();
+    const inner = r.width - 4;
+    const i = Math.floor(((clientX - r.left - 2) / inner) * n);
+    return opts[Math.max(0, Math.min(n - 1, i))].value;
+  };
+
+  const onPointerDown = (e) => {
+    setDragging(true);
+    const v0 = segAt(e.clientX);
+    if (v0 !== valueRef.current) onChange(v0);
+    const move = (ev) => {
+      if (!trackRef.current) return;
+      const v = segAt(ev.clientX);
+      if (v !== valueRef.current) onChange(v);
+    };
+    const up = () => {
+      setDragging(false);
+      window.removeEventListener('pointermove', move);
+      window.removeEventListener('pointerup', up);
+    };
+    window.addEventListener('pointermove', move);
+    window.addEventListener('pointerup', up);
+  };
+
+  return (
+    <TweakRow label={label}>
+      <div ref={trackRef} role="radiogroup" onPointerDown={onPointerDown}
+           className={dragging ? 'twk-seg dragging' : 'twk-seg'}>
+        <div className="twk-seg-thumb"
+             style={{ left: `calc(2px + ${idx} * (100% - 4px) / ${n})`,
+                      width: `calc((100% - 4px) / ${n})` }} />
+        {opts.map((o) => (
+          <button key={o.value} type="button" role="radio" aria-checked={o.value === value}>
+            {o.label}
+          </button>
+        ))}
+      </div>
+    </TweakRow>
+  );
+}
+
+function TweakSelect({ label, value, options, onChange }) {
+  return (
+    <TweakRow label={label}>
+      <select className="twk-field" value={value} onChange={(e) => onChange(e.target.value)}>
+        {options.map((o) => {
+          const v = typeof o === 'object' ? o.value : o;
+          const l = typeof o === 'object' ? o.label : o;
+          return <option key={v} value={v}>{l}</option>;
+        })}
+      </select>
+    </TweakRow>
+  );
+}
+
+function TweakText({ label, value, placeholder, onChange }) {
+  return (
+    <TweakRow label={label}>
+      <input className="twk-field" type="text" value={value} placeholder={placeholder}
+             onChange={(e) => onChange(e.target.value)} />
+    </TweakRow>
+  );
+}
+
+function TweakNumber({ label, value, min, max, step = 1, unit = '', onChange }) {
+  const clamp = (n) => {
+    if (min != null && n < min) return min;
+    if (max != null && n > max) return max;
+    return n;
+  };
+  const startRef = React.useRef({ x: 0, val: 0 });
+  const onScrubStart = (e) => {
+    e.preventDefault();
+    startRef.current = { x: e.clientX, val: value };
+    const decimals = (String(step).split('.')[1] || '').length;
+    const move = (ev) => {
+      const dx = ev.clientX - startRef.current.x;
+      const raw = startRef.current.val + dx * step;
+      const snapped = Math.round(raw / step) * step;
+      onChange(clamp(Number(snapped.toFixed(decimals))));
+    };
+    const up = () => {
+      window.removeEventListener('pointermove', move);
+      window.removeEventListener('pointerup', up);
+    };
+    window.addEventListener('pointermove', move);
+    window.addEventListener('pointerup', up);
+  };
+  return (
+    <div className="twk-num">
+      <span className="twk-num-lbl" onPointerDown={onScrubStart}>{label}</span>
+      <input type="number" value={value} min={min} max={max} step={step}
+             onChange={(e) => onChange(clamp(Number(e.target.value)))} />
+      {unit && <span className="twk-num-unit">{unit}</span>}
     </div>
-</section>
+  );
+}
 
-<!-- ───────── GALLERY ───────── -->
-<section id="gallery">
-    <div class="section-label">Galeri</div>
-    <h2 class="section-title">Yang akan Anda <em>nikmati</em>.</h2>
+// Relative-luminance contrast pick — checkmarks drawn over a swatch need to
+// read on both #111 and #fafafa without per-option configuration. Hex input
+// only (#rgb / #rrggbb); named or rgb()/hsl() colors fall through to "light".
+function __twkIsLight(hex) {
+  const h = String(hex).replace('#', '');
+  const x = h.length === 3 ? h.replace(/./g, (c) => c + c) : h.padEnd(6, '0');
+  const n = parseInt(x.slice(0, 6), 16);
+  if (Number.isNaN(n)) return true;
+  const r = (n >> 16) & 255, g = (n >> 8) & 255, b = n & 255;
+  return r * 299 + g * 587 + b * 114 > 148000;
+}
 
-    <div class="gallery-grid">
-        <div>
-            <svg viewBox="0 0 400 320" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                <rect width="400" height="320" fill="#e8dcc4"/>
-                <rect x="0" y="220" width="400" height="100" fill="#8b6e4e"/>
-                <rect x="60" y="60" width="280" height="160" fill="#fbf8f2"/>
-                <rect x="80" y="80" width="240" height="120" fill="#d6c5a8"/>
-                <!-- artwork -->
-                <circle cx="200" cy="130" r="30" fill="#8b3a1d"/>
-                <rect x="160" y="170" width="80" height="4" fill="#3d2f1f"/>
-                <!-- couch -->
-                <rect x="100" y="240" width="200" height="50" rx="6" fill="#3d2f1f"/>
-                <rect x="100" y="225" width="200" height="20" rx="6" fill="#5a4636"/>
-            </svg>
-        </div>
-        <div>
-            <svg viewBox="0 0 200 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                <rect width="200" height="160" fill="#c8a577"/>
-                <rect x="40" y="40" width="120" height="80" fill="#fbf8f2" rx="4"/>
-                <circle cx="100" cy="80" r="20" fill="#8b3a1d" opacity="0.3"/>
-            </svg>
-        </div>
-        <div>
-            <svg viewBox="0 0 200 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                <rect width="200" height="160" fill="#1c1c1a"/>
-                <rect x="0" y="60" width="200" height="100" fill="#3d2f1f"/>
-                <rect x="20" y="20" width="40" height="50" fill="#8b6e4e"/>
-                <rect x="80" y="20" width="40" height="50" fill="#8b6e4e"/>
-                <rect x="140" y="20" width="40" height="50" fill="#8b6e4e"/>
-                <circle cx="40" cy="100" r="3" fill="#c08c4c"/>
-                <circle cx="100" cy="100" r="3" fill="#c08c4c"/>
-                <circle cx="160" cy="100" r="3" fill="#c08c4c"/>
-            </svg>
-        </div>
-        <div>
-            <svg viewBox="0 0 300 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                <rect width="300" height="160" fill="#d4c9b3"/>
-                <rect x="50" y="50" width="200" height="80" rx="4" fill="#fbf8f2"/>
-                <rect x="50" y="50" width="200" height="20" fill="#8b6e4e"/>
-                <rect x="70" y="60" width="50" height="14" rx="2" fill="#e8dcc4"/>
-                <rect x="180" y="60" width="50" height="14" rx="2" fill="#e8dcc4"/>
-                <circle cx="60" cy="40" r="6" fill="#c08c4c"/>
-            </svg>
-        </div>
-        <div>
-            <svg viewBox="0 0 300 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <linearGradient id="poolg" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stop-color="#8db4c4"/>
-                        <stop offset="100%" stop-color="#3d6878"/>
-                    </linearGradient>
-                </defs>
-                <rect width="300" height="160" fill="url(#poolg)"/>
-                <ellipse cx="150" cy="80" rx="100" ry="40" fill="#c4dde6" opacity="0.4"/>
-                <line x1="80" y1="60" x2="220" y2="100" stroke="#fbf8f2" stroke-width="1" opacity="0.5"/>
-                <line x1="80" y1="100" x2="220" y2="60" stroke="#fbf8f2" stroke-width="1" opacity="0.5"/>
-            </svg>
-        </div>
-    </div>
-</section>
+const __TwkCheck = ({ light }) => (
+  <svg viewBox="0 0 14 14" aria-hidden="true">
+    <path d="M3 7.2 5.8 10 11 4.2" fill="none" strokeWidth="2.2"
+          strokeLinecap="round" strokeLinejoin="round"
+          stroke={light ? 'rgba(0,0,0,.78)' : '#fff'} />
+  </svg>
+);
 
-<!-- ───────── BOOKING ───────── -->
-<section class="booking" id="booking">
-    <div class="booking-grid">
-        <div class="booking-info">
-            <div class="section-label">Booking Langsung</div>
-            <h2 class="section-title" style="color: var(--bg);">Tanpa fee platform. <em style="color: var(--accent-soft);">Tanpa perantara.</em></h2>
-            <p>Booking di sini berarti Anda berbicara langsung dengan owner. Pembayaran aman via Midtrans (QRIS, transfer bank, e-wallet), konfirmasi otomatis, dan harga lebih kompetitif karena tidak ada fee platform.</p>
-
-            <div class="price-card">
-                <div class="price-row">
-                    <div>
-                        <div class="price-amount serif">Rp 750<span style="font-size: 1.2rem;">K</span></div>
-                        <div class="price-period">per malam · sudah termasuk pajak</div>
-                    </div>
-                </div>
-                <div class="price-detail"><span>Min. stay</span><strong>2 malam</strong></div>
-                <div class="price-detail"><span>Check-in</span><strong>15:00 WIB</strong></div>
-                <div class="price-detail"><span>Check-out</span><strong>12:00 WIB</strong></div>
-                <div class="price-detail"><span>Cleaning fee</span><strong>Rp 100K (sekali)</strong></div>
-            </div>
-        </div>
-
-        <div class="booking-form">
-            <div class="form-title">Form Booking</div>
-            <div class="form-sub">Isi data Anda, kami konfirmasi dalam &lt; 1 jam.</div>
-
-            <div class="form-row">
-                <div class="form-field">
-                    <label>Check-in</label>
-                    <input type="date" id="checkin" value="2026-05-20">
-                </div>
-                <div class="form-field">
-                    <label>Check-out</label>
-                    <input type="date" id="checkout" value="2026-05-23">
-                </div>
-                <div class="form-field">
-                    <label>Tamu</label>
-                    <select id="guests">
-                        <option value="1">1 tamu</option>
-                        <option value="2" selected>2 tamu</option>
-                        <option value="3">3 tamu</option>
-                        <option value="4">4 tamu</option>
-                    </select>
-                </div>
-                <div class="form-field">
-                    <label>Phone</label>
-                    <input type="tel" placeholder="08xx-xxxx-xxxx">
-                </div>
-                <div class="form-field form-field-full">
-                    <label>Nama Lengkap</label>
-                    <input type="text" placeholder="Nama sesuai KTP">
-                </div>
-                <div class="form-field form-field-full">
-                    <label>Email</label>
-                    <input type="email" placeholder="email@example.com">
-                </div>
-            </div>
-
-            <div class="summary-box">
-                <div class="summary-line"><span id="nights-label">3 malam × Rp 750.000</span><span id="subtotal">Rp 2.250.000</span></div>
-                <div class="summary-line"><span>Cleaning fee</span><span>Rp 100.000</span></div>
-                <div class="summary-total">
-                    <span>Total</span>
-                    <span class="total-num" id="total">Rp 2.350.000</span>
-                </div>
-            </div>
-
-            <button class="book-btn" onclick="bookNow()">
-                Bayar via Midtrans <span>→</span>
+// TweakColor — curated color/palette picker. Each option is either a single
+// hex string or an array of 1-5 hex strings; the card adapts — a lone color
+// renders solid, a palette renders colors[0] as the hero (left ~2/3) with the
+// rest stacked in a sharp column on the right. onChange emits the
+// option in the shape it was passed (string stays string, array stays array).
+// Without options it falls back to the native color input for back-compat.
+function TweakColor({ label, value, options, onChange }) {
+  if (!options || !options.length) {
+    return (
+      <div className="twk-row twk-row-h">
+        <div className="twk-lbl"><span>{label}</span></div>
+        <input type="color" className="twk-swatch" value={value}
+               onChange={(e) => onChange(e.target.value)} />
+      </div>
+    );
+  }
+  // Native <input type=color> emits lowercase hex per the HTML spec, so
+  // compare case-insensitively. String() guards JSON.stringify(undefined),
+  // which returns the primitive undefined (no .toLowerCase).
+  const key = (o) => String(JSON.stringify(o)).toLowerCase();
+  const cur = key(value);
+  return (
+    <TweakRow label={label}>
+      <div className="twk-chips" role="radiogroup">
+        {options.map((o, i) => {
+          const colors = Array.isArray(o) ? o : [o];
+          const [hero, ...rest] = colors;
+          const sup = rest.slice(0, 4);
+          const on = key(o) === cur;
+          return (
+            <button key={i} type="button" className="twk-chip" role="radio"
+                    aria-checked={on} data-on={on ? '1' : '0'}
+                    aria-label={colors.join(', ')} title={colors.join(' · ')}
+                    style={{ background: hero }}
+                    onClick={() => onChange(o)}>
+              {sup.length > 0 && (
+                <span>
+                  {sup.map((c, j) => <i key={j} style={{ background: c }} />)}
+                </span>
+              )}
+              {on && <__TwkCheck light={__twkIsLight(hero)} />}
             </button>
-            <div class="payment-note">🔒 Pembayaran aman · QRIS · Transfer · E-Wallet</div>
-        </div>
-    </div>
-</section>
+          );
+        })}
+      </div>
+    </TweakRow>
+  );
+}
 
-<!-- ───────── TRUST ───────── -->
-<section class="trust">
-    <div class="trust-title serif">Dipercaya oleh tamu dari seluruh Indonesia</div>
-    <div class="trust-sub">Owner-managed, response &lt; 1 jam</div>
+function TweakButton({ label, onClick, secondary = false }) {
+  return (
+    <button type="button" className={secondary ? 'twk-btn secondary' : 'twk-btn'}
+            onClick={onClick}>{label}</button>
+  );
+}
 
-    <div class="trust-grid">
-        <div class="trust-item">
-            <div class="trust-item-num serif">4.9</div>
-            <div class="trust-item-label">Rating dari 47 tamu sebelumnya</div>
-        </div>
-        <div class="trust-item">
-            <div class="trust-item-num serif">98%</div>
-            <div class="trust-item-label">Tamu merekomendasikan ke teman</div>
-        </div>
-        <div class="trust-item">
-            <div class="trust-item-num serif">&lt;1h</div>
-            <div class="trust-item-label">Rata-rata waktu respon</div>
-        </div>
-    </div>
-</section>
 
-<footer>
-    <div class="footer-brand">Casa <span>Riviera</span></div>
-    <div class="footer-line">Premium 2BR Stay · Meikarta Riviera District 2 · Cikarang</div>
-    <div class="footer-meta">Powered by asacasastay.com</div>
-</footer>
 
-<script>
-    function recalc() {
-        const checkin = new Date(document.getElementById('checkin').value);
-        const checkout = new Date(document.getElementById('checkout').value);
-        const nights = Math.max(1, Math.round((checkout - checkin) / (1000 * 60 * 60 * 24)));
-        const rate = 750000;
-        const cleaning = 100000;
-        const subtotal = nights * rate;
-        const total = subtotal + cleaning;
+// art.jsx — shared SVG illustration primitives.
+// All artwork is honest CSS/SVG — no photos. Keeps the prototype self-contained.
 
-        document.getElementById('nights-label').textContent = `${nights} malam × Rp 750.000`;
-        document.getElementById('subtotal').textContent = `Rp ${subtotal.toLocaleString('id-ID')}`;
-        document.getElementById('total').textContent = `Rp ${total.toLocaleString('id-ID')}`;
+// (removed duplicate React destructure)
+// ── Hero artwork ─────────────────────────────────────────────────────────
+function ArtLivingRoom() {
+  return (
+    <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="art-sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#dcc7a5" />
+          <stop offset="55%" stopColor="#c39666" />
+          <stop offset="100%" stopColor="#7a5a30" />
+        </linearGradient>
+        <linearGradient id="art-room" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#f4f0e8" />
+          <stop offset="100%" stopColor="#d4c9b3" />
+        </linearGradient>
+      </defs>
+      <rect width="400" height="400" fill="url(#art-room)" />
+      {/* window */}
+      <rect x="40" y="50" width="320" height="250" fill="url(#art-sky)" />
+      {/* skyline */}
+      <g fill="#3d2f1f" opacity="0.78">
+        <rect x="50" y="180" width="34" height="120" />
+        <rect x="92" y="150" width="42" height="150" />
+        <rect x="140" y="170" width="30" height="130" />
+        <rect x="178" y="125" width="56" height="175" />
+        <rect x="242" y="160" width="36" height="140" />
+        <rect x="284" y="178" width="44" height="122" />
+        <rect x="334" y="195" width="26" height="105" />
+      </g>
+      {/* tiny window lights */}
+      <g fill="#f0c97a" opacity="0.85">
+        <rect x="100" y="170" width="3" height="3" />
+        <rect x="110" y="200" width="3" height="3" />
+        <rect x="188" y="160" width="3" height="3" />
+        <rect x="202" y="200" width="3" height="3" />
+        <rect x="220" y="240" width="3" height="3" />
+        <rect x="252" y="195" width="3" height="3" />
+        <rect x="296" y="220" width="3" height="3" />
+      </g>
+      {/* sun */}
+      <circle cx="305" cy="115" r="22" fill="#f0d9a9" opacity="0.65" />
+      {/* window frame */}
+      <line x1="200" y1="50" x2="200" y2="300" stroke="#1c1c1a" strokeWidth="3" opacity="0.35" />
+      <line x1="40" y1="175" x2="360" y2="175" stroke="#1c1c1a" strokeWidth="3" opacity="0.35" />
+      <rect x="40" y="50" width="320" height="250" fill="none" stroke="#1c1c1a" strokeWidth="4" opacity="0.5" />
+      {/* sofa */}
+      <rect x="60" y="320" width="280" height="55" rx="8" fill="#6b5234" />
+      <rect x="60" y="305" width="280" height="25" rx="8" fill="#86684a" />
+      <rect x="80" y="312" width="50" height="18" rx="4" fill="#a08361" />
+      <rect x="270" y="312" width="50" height="18" rx="4" fill="#a08361" />
+      {/* coffee table */}
+      <ellipse cx="200" cy="386" rx="60" ry="6" fill="#2a1f12" opacity="0.5" />
+      {/* plant */}
+      <rect x="350" y="290" width="14" height="20" fill="#6b5234" />
+      <circle cx="357" cy="282" r="12" fill="#3c5d3a" />
+      <circle cx="350" cy="278" r="8" fill="#4a6f48" />
+      <circle cx="362" cy="276" r="7" fill="#4a6f48" />
+    </svg>
+  );
+}
+
+function ArtBedroom() {
+  return (
+    <svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice">
+      <rect width="200" height="200" fill="#e8dcc4" />
+      <rect x="0" y="0" width="200" height="40" fill="#dccfb1" />
+      {/* headboard */}
+      <rect x="38" y="48" width="124" height="42" rx="6" fill="#86684a" />
+      <rect x="40" y="50" width="120" height="6" fill="#a08361" />
+      {/* bed */}
+      <rect x="28" y="85" width="144" height="80" rx="5" fill="#fbf8f2" />
+      <rect x="28" y="85" width="144" height="22" fill="#d4c9b3" />
+      {/* pillows */}
+      <rect x="45" y="92" width="44" height="18" rx="3" fill="#e8dcc4" />
+      <rect x="111" y="92" width="44" height="18" rx="3" fill="#e8dcc4" />
+      {/* throw */}
+      <rect x="28" y="148" width="144" height="14" fill="#8b3a1d" opacity="0.7" />
+      {/* nightstand */}
+      <rect x="170" y="120" width="22" height="40" fill="#6b5234" />
+      {/* lamp */}
+      <line x1="181" y1="120" x2="181" y2="105" stroke="#3d2f1f" strokeWidth="2" />
+      <path d="M174 95 L188 95 L184 110 L178 110 Z" fill="#c08c4c" />
+      <circle cx="181" cy="118" r="2" fill="#f0d9a9" />
+    </svg>
+  );
+}
+
+function ArtKitchen() {
+  return (
+    <svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice">
+      <rect width="200" height="200" fill="#d4c9b3" />
+      {/* upper cabinets */}
+      <rect x="18" y="28" width="48" height="56" rx="2" fill="#6b5234" />
+      <rect x="76" y="28" width="48" height="56" rx="2" fill="#6b5234" />
+      <rect x="134" y="28" width="48" height="56" rx="2" fill="#6b5234" />
+      <line x1="42" y1="32" x2="42" y2="80" stroke="#3d2f1f" strokeWidth="0.5" />
+      <line x1="100" y1="32" x2="100" y2="80" stroke="#3d2f1f" strokeWidth="0.5" />
+      <line x1="158" y1="32" x2="158" y2="80" stroke="#3d2f1f" strokeWidth="0.5" />
+      {/* knobs */}
+      <circle cx="38" cy="78" r="1" fill="#1c1c1a" />
+      <circle cx="46" cy="78" r="1" fill="#1c1c1a" />
+      <circle cx="96" cy="78" r="1" fill="#1c1c1a" />
+      <circle cx="104" cy="78" r="1" fill="#1c1c1a" />
+      <circle cx="154" cy="78" r="1" fill="#1c1c1a" />
+      <circle cx="162" cy="78" r="1" fill="#1c1c1a" />
+      {/* counter */}
+      <rect x="0" y="110" width="200" height="6" fill="#fbf8f2" />
+      <rect x="0" y="115" width="200" height="85" fill="#1c1c1a" />
+      {/* sink */}
+      <rect x="78" y="130" width="44" height="22" rx="2" fill="#3d2f1f" stroke="#5a5651" strokeWidth="1" />
+      <circle cx="100" cy="125" r="1.5" fill="#5a5651" />
+      {/* pendant */}
+      <line x1="60" y1="0" x2="60" y2="14" stroke="#3d2f1f" strokeWidth="1" />
+      <ellipse cx="60" cy="18" rx="6" ry="4" fill="#c08c4c" />
+      <line x1="140" y1="0" x2="140" y2="14" stroke="#3d2f1f" strokeWidth="1" />
+      <ellipse cx="140" cy="18" rx="6" ry="4" fill="#c08c4c" />
+    </svg>
+  );
+}
+
+function ArtBathroom() {
+  return (
+    <svg viewBox="0 0 200 160" preserveAspectRatio="xMidYMid slice">
+      <rect width="200" height="160" fill="#e0d3b6" />
+      {/* tile pattern */}
+      <g stroke="#c4b591" strokeWidth="0.5" opacity="0.7">
+        <line x1="0" y1="40" x2="200" y2="40" />
+        <line x1="0" y1="80" x2="200" y2="80" />
+        <line x1="0" y1="120" x2="200" y2="120" />
+        <line x1="40" y1="0" x2="40" y2="160" />
+        <line x1="80" y1="0" x2="80" y2="160" />
+        <line x1="120" y1="0" x2="120" y2="160" />
+        <line x1="160" y1="0" x2="160" y2="160" />
+      </g>
+      {/* mirror */}
+      <rect x="60" y="20" width="80" height="50" rx="40" fill="#a8c4d4" />
+      <rect x="60" y="20" width="80" height="50" rx="40" fill="none" stroke="#1c1c1a" strokeWidth="2" opacity="0.4" />
+      {/* sink */}
+      <rect x="40" y="90" width="120" height="14" rx="2" fill="#fbf8f2" />
+      <ellipse cx="100" cy="104" rx="36" ry="6" fill="#1c1c1a" opacity="0.15" />
+      {/* faucet */}
+      <rect x="98" y="80" width="4" height="14" fill="#5a5651" />
+      <rect x="92" y="78" width="16" height="3" fill="#5a5651" />
+    </svg>
+  );
+}
+
+function ArtBalcony() {
+  return (
+    <svg viewBox="0 0 300 160" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="art-bal-sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#cda87a" />
+          <stop offset="100%" stopColor="#8b6539" />
+        </linearGradient>
+      </defs>
+      <rect width="300" height="160" fill="url(#art-bal-sky)" />
+      {/* railing */}
+      <line x1="0" y1="100" x2="300" y2="100" stroke="#1c1c1a" strokeWidth="2" opacity="0.6" />
+      <line x1="0" y1="140" x2="300" y2="140" stroke="#1c1c1a" strokeWidth="3" />
+      {[20, 50, 80, 110, 140, 170, 200, 230, 260, 290].map((x) => (
+        <line key={x} x1={x} y1="100" x2={x} y2="140" stroke="#1c1c1a" strokeWidth="2" opacity="0.55" />
+      ))}
+      {/* far skyline */}
+      <g fill="#3d2f1f" opacity="0.55">
+        <rect x="20" y="70" width="30" height="30" />
+        <rect x="55" y="55" width="40" height="45" />
+        <rect x="100" y="65" width="28" height="35" />
+        <rect x="130" y="40" width="50" height="60" />
+        <rect x="185" y="60" width="32" height="40" />
+        <rect x="220" y="50" width="42" height="50" />
+        <rect x="265" y="70" width="25" height="30" />
+      </g>
+      {/* chair */}
+      <rect x="40" y="120" width="34" height="20" rx="3" fill="#6b5234" />
+      <rect x="40" y="100" width="34" height="24" rx="3" fill="#86684a" />
+      <line x1="44" y1="140" x2="44" y2="155" stroke="#3d2f1f" strokeWidth="2" />
+      <line x1="70" y1="140" x2="70" y2="155" stroke="#3d2f1f" strokeWidth="2" />
+    </svg>
+  );
+}
+
+function ArtPool() {
+  return (
+    <svg viewBox="0 0 300 160" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="art-pool" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#a8c4d4" />
+          <stop offset="100%" stopColor="#3d6878" />
+        </linearGradient>
+      </defs>
+      <rect width="300" height="160" fill="#d4c9b3" />
+      {/* pool deck */}
+      <rect x="20" y="20" width="260" height="120" fill="#e8dcc4" rx="3" />
+      {/* pool */}
+      <rect x="40" y="40" width="220" height="80" fill="url(#art-pool)" rx="3" />
+      {/* ripples */}
+      <g stroke="#fbf8f2" strokeWidth="1" opacity="0.5" fill="none">
+        <path d="M60 60 Q90 65 120 60" />
+        <path d="M140 75 Q170 80 200 75" />
+        <path d="M70 95 Q100 100 130 95" />
+        <path d="M170 105 Q200 110 230 105" />
+      </g>
+      {/* lounge chair */}
+      <rect x="42" y="124" width="40" height="8" rx="2" fill="#6b5234" />
+      {/* sun */}
+      <circle cx="260" cy="32" r="10" fill="#f0d9a9" opacity="0.7" />
+    </svg>
+  );
+}
+
+function ArtDining() {
+  return (
+    <svg viewBox="0 0 300 160" preserveAspectRatio="xMidYMid slice">
+      <rect width="300" height="160" fill="#dccfb1" />
+      {/* table */}
+      <rect x="50" y="80" width="200" height="60" rx="4" fill="#86684a" />
+      <rect x="50" y="80" width="200" height="8" fill="#a08361" />
+      {/* chairs */}
+      <rect x="60" y="48" width="50" height="42" rx="3" fill="#6b5234" />
+      <rect x="190" y="48" width="50" height="42" rx="3" fill="#6b5234" />
+      {/* plates */}
+      <circle cx="100" cy="110" r="14" fill="#fbf8f2" />
+      <circle cx="100" cy="110" r="8" fill="#e8dcc4" />
+      <circle cx="200" cy="110" r="14" fill="#fbf8f2" />
+      <circle cx="200" cy="110" r="8" fill="#e8dcc4" />
+      {/* centerpiece */}
+      <rect x="146" y="98" width="8" height="20" fill="#3c5d3a" />
+      <circle cx="150" cy="98" r="6" fill="#8b3a1d" />
+      {/* pendant */}
+      <line x1="150" y1="0" x2="150" y2="20" stroke="#3d2f1f" strokeWidth="1" />
+      <ellipse cx="150" cy="26" rx="14" ry="8" fill="#c08c4c" />
+    </svg>
+  );
+}
+
+// ── Avatar (host card) — abstract initial badge, no faces ────────────────
+function HostAvatar({ initial = "A" }) {
+  return (
+    <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="avat-g" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="#c08c4c" />
+          <stop offset="100%" stopColor="#8b3a1d" />
+        </linearGradient>
+      </defs>
+      <rect width="100" height="100" fill="url(#avat-g)" />
+      <text x="50" y="65" textAnchor="middle" fontFamily="Fraunces, serif"
+            fontSize="44" fill="#fbf8f2" fontStyle="italic" fontWeight="400">{initial}</text>
+    </svg>
+  );
+}
+
+// ── Neighborhood map ─────────────────────────────────────────────────────
+function NeighMap() {
+  return (
+    <svg viewBox="0 0 400 320" preserveAspectRatio="xMidYMid slice">
+      <rect width="400" height="320" fill="#f4f0e8" />
+      {/* district blocks */}
+      <g fill="#e8dcc4">
+        <rect x="20" y="20" width="110" height="80" rx="2" />
+        <rect x="140" y="20" width="120" height="80" rx="2" />
+        <rect x="270" y="20" width="110" height="80" rx="2" />
+        <rect x="20" y="110" width="110" height="90" rx="2" />
+        <rect x="270" y="110" width="110" height="90" rx="2" />
+        <rect x="20" y="210" width="110" height="90" rx="2" />
+        <rect x="140" y="210" width="120" height="90" rx="2" />
+        <rect x="270" y="210" width="110" height="90" rx="2" />
+      </g>
+      {/* central park */}
+      <rect x="140" y="110" width="120" height="90" rx="3" fill="#c4d4b8" />
+      <text x="200" y="158" textAnchor="middle" fontFamily="Fraunces, serif"
+            fontSize="11" fill="#5a6b48" letterSpacing="0.1em">CENTRAL PARK</text>
+      <circle cx="170" cy="180" r="4" fill="#7a9968" />
+      <circle cx="225" cy="135" r="4" fill="#7a9968" />
+      <circle cx="240" cy="178" r="5" fill="#7a9968" />
+      {/* roads */}
+      <g stroke="#fbf8f2" strokeWidth="6" fill="none">
+        <line x1="0" y1="105" x2="400" y2="105" />
+        <line x1="0" y1="205" x2="400" y2="205" />
+        <line x1="135" y1="0" x2="135" y2="320" />
+        <line x1="265" y1="0" x2="265" y2="320" />
+      </g>
+      <g stroke="#d4c9b3" strokeWidth="6" fill="none">
+        <line x1="0" y1="105" x2="400" y2="105" strokeDasharray="2 8" />
+        <line x1="0" y1="205" x2="400" y2="205" strokeDasharray="2 8" />
+      </g>
+      {/* tower marker */}
+      <g transform="translate(75 155)">
+        <circle r="22" fill="#8b3a1d" opacity="0.18" />
+        <circle r="14" fill="#8b3a1d" />
+        <text y="5" textAnchor="middle" fontFamily="Inter Tight, sans-serif"
+              fontSize="11" fill="#fbf8f2" fontWeight="600">D2</text>
+      </g>
+      {/* mall marker */}
+      <g transform="translate(325 60)">
+        <circle r="9" fill="#1c1c1a" />
+        <text y="3" textAnchor="middle" fontSize="9" fill="#fbf8f2">M</text>
+      </g>
+      {/* station marker */}
+      <g transform="translate(75 255)">
+        <circle r="9" fill="#1c1c1a" />
+        <text y="3" textAnchor="middle" fontSize="8" fill="#fbf8f2">S</text>
+      </g>
+      {/* compass */}
+      <g transform="translate(360 295)" opacity="0.5">
+        <circle r="14" fill="none" stroke="#1c1c1a" strokeWidth="1" />
+        <path d="M0 -10 L3 0 L0 10 L-3 0 Z" fill="#1c1c1a" />
+        <text y="-16" textAnchor="middle" fontSize="8" fill="#1c1c1a">N</text>
+      </g>
+    </svg>
+  );
+}
+
+// ── Floor plan — schematic, 2BR ──────────────────────────────────────────
+function FloorPlan() {
+  return (
+    <svg viewBox="0 0 480 360" preserveAspectRatio="xMidYMid meet">
+      {/* outer wall */}
+      <rect x="20" y="20" width="440" height="320" fill="#fbf8f2"
+            stroke="#1c1c1a" strokeWidth="3" />
+
+      {/* Living + dining */}
+      <rect x="20" y="20" width="260" height="200" fill="#f4f0e8" stroke="#1c1c1a" strokeWidth="1" />
+      <text x="60" y="60" fontFamily="Fraunces, serif" fontSize="14" fill="#1c1c1a" fontStyle="italic">Living &amp; Dining</text>
+      <text x="60" y="78" fontFamily="Inter Tight, sans-serif" fontSize="10" fill="#5a5651" letterSpacing="0.06em">22 m²</text>
+      {/* sofa */}
+      <rect x="50" y="155" width="120" height="40" fill="none" stroke="#5a5651" strokeWidth="1.2" />
+      <line x1="50" y1="155" x2="170" y2="155" stroke="#5a5651" strokeWidth="1.2" />
+      {/* coffee table */}
+      <rect x="80" y="125" width="60" height="22" fill="none" stroke="#5a5651" strokeWidth="1" />
+      {/* dining */}
+      <rect x="195" y="60" width="65" height="100" fill="none" stroke="#5a5651" strokeWidth="1.2" />
+      <circle cx="227" cy="110" r="6" fill="none" stroke="#5a5651" strokeWidth="0.8" />
+
+      {/* Master bedroom */}
+      <rect x="280" y="20" width="180" height="170" fill="#ebe4d4" stroke="#1c1c1a" strokeWidth="1" />
+      <text x="310" y="60" fontFamily="Fraunces, serif" fontSize="14" fill="#1c1c1a" fontStyle="italic">Master Bedroom</text>
+      <text x="310" y="78" fontFamily="Inter Tight, sans-serif" fontSize="10" fill="#5a5651" letterSpacing="0.06em">14 m²</text>
+      {/* bed */}
+      <rect x="310" y="115" width="100" height="60" fill="none" stroke="#5a5651" strokeWidth="1.2" />
+      <line x1="310" y1="125" x2="410" y2="125" stroke="#5a5651" strokeWidth="0.8" />
+      <rect x="318" y="118" width="35" height="14" fill="none" stroke="#5a5651" strokeWidth="0.6" />
+      <rect x="367" y="118" width="35" height="14" fill="none" stroke="#5a5651" strokeWidth="0.6" />
+
+      {/* 2nd bedroom */}
+      <rect x="280" y="190" width="120" height="150" fill="#ebe4d4" stroke="#1c1c1a" strokeWidth="1" />
+      <text x="295" y="220" fontFamily="Fraunces, serif" fontSize="13" fill="#1c1c1a" fontStyle="italic">2nd Bedroom</text>
+      <text x="295" y="234" fontFamily="Inter Tight, sans-serif" fontSize="10" fill="#5a5651" letterSpacing="0.06em">10 m²</text>
+      <rect x="300" y="260" width="80" height="55" fill="none" stroke="#5a5651" strokeWidth="1.2" />
+
+      {/* Bath */}
+      <rect x="400" y="190" width="60" height="80" fill="#f4f0e8" stroke="#1c1c1a" strokeWidth="1" />
+      <text x="410" y="220" fontFamily="Fraunces, serif" fontSize="11" fill="#1c1c1a" fontStyle="italic">Bath</text>
+      <circle cx="430" cy="248" r="8" fill="none" stroke="#5a5651" strokeWidth="0.8" />
+      <rect x="408" y="232" width="14" height="20" fill="none" stroke="#5a5651" strokeWidth="0.6" />
+
+      {/* Kitchen */}
+      <rect x="20" y="220" width="170" height="120" fill="#ebe4d4" stroke="#1c1c1a" strokeWidth="1" />
+      <text x="50" y="250" fontFamily="Fraunces, serif" fontSize="13" fill="#1c1c1a" fontStyle="italic">Kitchen</text>
+      <text x="50" y="264" fontFamily="Inter Tight, sans-serif" fontSize="10" fill="#5a5651" letterSpacing="0.06em">6 m²</text>
+      <rect x="30" y="290" width="150" height="14" fill="none" stroke="#5a5651" strokeWidth="1" />
+      <line x1="60" y1="290" x2="60" y2="304" stroke="#5a5651" strokeWidth="0.5" />
+      <line x1="100" y1="290" x2="100" y2="304" stroke="#5a5651" strokeWidth="0.5" />
+      <line x1="140" y1="290" x2="140" y2="304" stroke="#5a5651" strokeWidth="0.5" />
+
+      {/* Entry / hallway */}
+      <rect x="190" y="220" width="90" height="120" fill="#f4f0e8" stroke="#1c1c1a" strokeWidth="1" />
+      <text x="200" y="248" fontFamily="Fraunces, serif" fontSize="11" fill="#1c1c1a" fontStyle="italic">Entry</text>
+
+      {/* door arcs */}
+      <path d="M 280 280 A 25 25 0 0 1 305 305" fill="none" stroke="#5a5651" strokeWidth="0.8" />
+      <path d="M 280 130 A 25 25 0 0 1 305 155" fill="none" stroke="#5a5651" strokeWidth="0.8" />
+      {/* door cutouts */}
+      <line x1="280" y1="255" x2="280" y2="280" stroke="#fbf8f2" strokeWidth="3" />
+      <line x1="280" y1="105" x2="280" y2="130" stroke="#fbf8f2" strokeWidth="3" />
+      <line x1="400" y1="220" x2="400" y2="240" stroke="#fbf8f2" strokeWidth="3" />
+      <line x1="190" y1="305" x2="190" y2="325" stroke="#fbf8f2" strokeWidth="3" />
+
+      {/* north indicator */}
+      <g transform="translate(444 36)" opacity="0.6">
+        <path d="M0 -8 L3 4 L0 -1 L-3 4 Z" fill="#1c1c1a" />
+        <text y="14" textAnchor="middle" fontSize="8" fill="#1c1c1a" fontFamily="Inter Tight">N</text>
+      </g>
+
+      {/* scale */}
+      <g transform="translate(36 348)" fill="#5a5651">
+        <line x1="0" y1="0" x2="60" y2="0" stroke="#5a5651" strokeWidth="0.8" />
+        <line x1="0" y1="-3" x2="0" y2="3" stroke="#5a5651" strokeWidth="0.8" />
+        <line x1="60" y1="-3" x2="60" y2="3" stroke="#5a5651" strokeWidth="0.8" />
+        <text x="32" y="10" fontSize="8" fontFamily="Inter Tight" textAnchor="middle">3 m</text>
+      </g>
+    </svg>
+  );
+}
+
+// ── QR code (fake but plausible) ─────────────────────────────────────────
+function FakeQR() {
+  // Deterministic pseudo-random 25×25 grid with corner finders.
+  const N = 25;
+  const cells = useMemo(() => {
+    const out = [];
+    let seed = 7919;
+    const rng = () => {
+      seed = (seed * 9301 + 49297) % 233280;
+      return seed / 233280;
+    };
+    for (let y = 0; y < N; y++) {
+      for (let x = 0; x < N; x++) {
+        const isFinder = (
+          (x < 7 && y < 7) ||
+          (x > N - 8 && y < 7) ||
+          (x < 7 && y > N - 8)
+        );
+        if (!isFinder && rng() > 0.55) out.push([x, y]);
+      }
     }
+    return out;
+  }, []);
+  const finder = (x, y) => (
+    <g key={`f-${x}-${y}`}>
+      <rect x={x} y={y} width="7" height="7" fill="#1c1c1a" />
+      <rect x={x + 1} y={y + 1} width="5" height="5" fill="#fff" />
+      <rect x={x + 2} y={y + 2} width="3" height="3" fill="#1c1c1a" />
+    </g>
+  );
+  return (
+    <svg viewBox={`0 0 ${N} ${N}`} shapeRendering="crispEdges">
+      <rect width={N} height={N} fill="#fff" />
+      {cells.map(([x, y]) => (
+        <rect key={`c-${x}-${y}`} x={x} y={y} width="1" height="1" fill="#1c1c1a" />
+      ))}
+      {finder(0, 0)}
+      {finder(N - 7, 0)}
+      {finder(0, N - 7)}
+      {/* center logo cutout */}
+      <rect x={(N / 2) - 3} y={(N / 2) - 3} width="6" height="6" fill="#fff" />
+      <circle cx={N / 2} cy={N / 2} r="2.2" fill="#8b3a1d" />
+    </svg>
+  );
+}
 
-    document.getElementById('checkin').addEventListener('change', recalc);
-    document.getElementById('checkout').addEventListener('change', recalc);
 
-    function bookNow() {
-        alert('Demo: pada implementasi nyata akan redirect ke Midtrans payment gateway dengan QRIS / Transfer Bank / E-Wallet.\n\nUntuk owner: confirmation email + admin dashboard.\nUntuk tamu: receipt + check-in instructions.');
+const Art = {
+  LivingRoom: ArtLivingRoom,
+  Bedroom: ArtBedroom,
+  Kitchen: ArtKitchen,
+  Bathroom: ArtBathroom,
+  Balcony: ArtBalcony,
+  Pool: ArtPool,
+  Dining: ArtDining,
+  HostAvatar,
+  NeighMap,
+  FloorPlan,
+  FakeQR,
+};
+
+
+// booking.jsx — Calendar, booking form, summary, Midtrans modal.
+
+// (removed duplicate React destructure)
+// Date helpers (no library — keep it tight)
+const DAYS_ID = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+const MONTH_NAMES = ['January','February','March','April','May','June',
+                    'July','August','September','October','November','December'];
+
+function daysInMonth(year, monthIdx) {
+  return new Date(year, monthIdx + 1, 0).getDate();
+}
+function startOfDay(d) { return new Date(d.getFullYear(), d.getMonth(), d.getDate()); }
+function addDays(d, n) { const x = new Date(d); x.setDate(x.getDate() + n); return x; }
+function diffDays(a, b) { return Math.round((startOfDay(b) - startOfDay(a)) / 86400000); }
+function fmtISO(d) {
+  const y = d.getFullYear(), m = String(d.getMonth() + 1).padStart(2,'0'), dd = String(d.getDate()).padStart(2,'0');
+  return `${y}-${m}-${dd}`;
+}
+function fmtNice(d) {
+  return `${d.getDate()} ${MONTH_NAMES[d.getMonth()].slice(0,3)} ${d.getFullYear()}`;
+}
+function fmtWeekday(d) { return ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][d.getDay()]; }
+function fmtIDR(n) {
+  return 'Rp ' + Math.round(n).toLocaleString('id-ID');
+}
+
+// Pre-booked dates (demo) — relative to today
+function generateBookedRanges() {
+  const today = startOfDay(new Date());
+  const ranges = [
+    [addDays(today, 6), addDays(today, 9)],
+    [addDays(today, 18), addDays(today, 21)],
+    [addDays(today, 32), addDays(today, 34)],
+    [addDays(today, 48), addDays(today, 52)],
+  ];
+  const set = new Set();
+  ranges.forEach(([a, b]) => {
+    for (let d = new Date(a); d <= b; d = addDays(d, 1)) {
+      set.add(fmtISO(d));
     }
+  });
+  return set;
+}
+
+// ── Inline calendar with range selection ──────────────────────────────────
+function Calendar({ checkIn, checkOut, onPickIn, onPickOut, bookedDates }) {
+  const today = startOfDay(new Date());
+  const [viewMonth, setViewMonth] = useState(() => {
+    const d = checkIn ? new Date(checkIn) : today;
+    return new Date(d.getFullYear(), d.getMonth(), 1);
+  });
+  const [hoverDate, setHoverDate] = useState(null);
+  // selection mode: 0 = pick check-in, 1 = pick check-out
+  const [mode, setMode] = useState(checkIn && !checkOut ? 1 : 0);
+
+  const year = viewMonth.getFullYear();
+  const month = viewMonth.getMonth();
+  const firstWeekday = new Date(year, month, 1).getDay();
+  const total = daysInMonth(year, month);
+
+  const canPrev = (viewMonth.getFullYear() > today.getFullYear()) ||
+    (viewMonth.getFullYear() === today.getFullYear() && viewMonth.getMonth() > today.getMonth());
+
+  const goPrev = () => {
+    if (!canPrev) return;
+    setViewMonth(new Date(year, month - 1, 1));
+  };
+  const goNext = () => setViewMonth(new Date(year, month + 1, 1));
+
+  const handleClick = (d) => {
+    const iso = fmtISO(d);
+    if (bookedDates.has(iso)) return;
+    if (d < today) return;
+    if (mode === 0 || !checkIn) {
+      onPickIn(d);
+      onPickOut(null);
+      setMode(1);
+    } else {
+      // ensure ≥ check-in + min stay; if not, restart
+      if (d <= checkIn) {
+        onPickIn(d);
+        onPickOut(null);
+        setMode(1);
+        return;
+      }
+      // ensure no booked date in between
+      let blocked = false;
+      for (let cur = addDays(checkIn, 1); cur <= d; cur = addDays(cur, 1)) {
+        if (bookedDates.has(fmtISO(cur))) { blocked = true; break; }
+      }
+      if (blocked) {
+        onPickIn(d);
+        onPickOut(null);
+        setMode(1);
+        return;
+      }
+      onPickOut(d);
+      setMode(0);
+    }
+  };
+
+  const cells = [];
+  for (let i = 0; i < firstWeekday; i++) cells.push({ empty: true, key: `e-${i}` });
+  for (let day = 1; day <= total; day++) {
+    const d = new Date(year, month, day);
+    const iso = fmtISO(d);
+    const past = d < today;
+    const booked = bookedDates.has(iso);
+    const isIn = checkIn && fmtISO(checkIn) === iso;
+    const isOut = checkOut && fmtISO(checkOut) === iso;
+    let inRange = false;
+    if (checkIn && checkOut) {
+      inRange = d > checkIn && d < checkOut;
+    } else if (checkIn && hoverDate && mode === 1 && hoverDate > checkIn) {
+      inRange = d > checkIn && d < hoverDate;
+    }
+    cells.push({
+      key: iso,
+      day, d, iso,
+      disabled: past || booked,
+      booked,
+      isIn, isOut,
+      inRange,
+      hoverEnd: checkIn && !checkOut && mode === 1 && hoverDate && fmtISO(hoverDate) === iso && d > checkIn,
+    });
+  }
+
+  return (
+    <div className="cal" data-noncommentable="">
+      <div className="cal-head">
+        <div className="cal-month serif">{MONTH_NAMES[month]} {year}</div>
+        <div className="cal-nav">
+          <button onClick={goPrev} disabled={!canPrev} aria-label="Previous month">‹</button>
+          <button onClick={goNext} aria-label="Next month">›</button>
+        </div>
+      </div>
+      <div className="cal-weekdays">
+        {DAYS_ID.map((d) => <div key={d}>{d}</div>)}
+      </div>
+      <div className="cal-grid">
+        {cells.map((c) => {
+          if (c.empty) return <div key={c.key} className="cal-day empty" />;
+          const classes = ['cal-day'];
+          if (c.disabled) classes.push('disabled');
+          if (c.booked) classes.push('booked');
+          if (c.isIn && c.isOut) classes.push('range-single');
+          else if (c.isIn) classes.push('range-start');
+          else if (c.isOut || c.hoverEnd) classes.push('range-end');
+          if (c.inRange) classes.push('in-range');
+          return (
+            <div key={c.key}
+                 className={classes.join(' ')}
+                 onMouseEnter={() => setHoverDate(c.d)}
+                 onMouseLeave={() => setHoverDate(null)}
+                 onClick={() => handleClick(c.d)}>
+              {c.day}
+            </div>
+          );
+        })}
+      </div>
+      <div style={{marginTop: '0.9rem', display: 'flex', gap: '1rem', flexWrap: 'wrap',
+                   fontSize: '0.72rem', color: 'var(--ink-soft)', alignItems: 'center'}}>
+        <span style={{display:'inline-flex',alignItems:'center',gap:'0.4rem'}}>
+          <span style={{width:'10px',height:'10px',background:'var(--ink)',borderRadius:'50%'}} /> Selected
+        </span>
+        <span style={{display:'inline-flex',alignItems:'center',gap:'0.4rem'}}>
+          <span style={{width:'10px',height:'10px',background:'rgba(139,58,29,0.20)',borderRadius:'2px'}} /> Within stay
+        </span>
+        <span style={{display:'inline-flex',alignItems:'center',gap:'0.4rem',textDecoration:'line-through'}}>
+          Booked
+        </span>
+      </div>
+    </div>
+  );
+}
+
+// ── Main booking section ──────────────────────────────────────────────────
+function BookingSection({ onTotalChange, openModal }) {
+  const NIGHTLY = 750000;
+  const CLEANING = 100000;
+  const MIN_STAY = 2;
+
+  const bookedDates = useMemo(() => generateBookedRanges(), []);
+  const today = startOfDay(new Date());
+
+  const [checkIn, setCheckIn] = useState(() => addDays(today, 14));
+  const [checkOut, setCheckOut] = useState(() => addDays(today, 17));
+  const [guests, setGuests] = useState(2);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [calOpen, setCalOpen] = useState(false);
+
+  const nights = checkIn && checkOut ? Math.max(0, diffDays(checkIn, checkOut)) : 0;
+  const subtotal = nights * NIGHTLY;
+  const total = subtotal + (nights > 0 ? CLEANING : 0);
+  const valid = nights >= MIN_STAY && name && email && phone;
+
+  // Bubble up total so sticky widget can render the same price
+  useEffect(() => {
+    onTotalChange && onTotalChange({ total, nights, NIGHTLY });
+  }, [total, nights, onTotalChange]);
+
+  const handleBook = (e) => {
+    e.preventDefault();
+    if (!valid) return;
+    openModal({
+      total,
+      nights,
+      checkIn,
+      checkOut,
+      guests,
+      name,
+      email,
+      phone,
+    });
+  };
+
+  return (
+    <section className="booking section-pad" id="booking">
+      <div className="container">
+        <div className="booking-grid">
+          <div className="booking-info reveal">
+            <div className="section-label">Reserve directly</div>
+            <h2 className="section-title">No platform fee. <em>No middlemen.</em></h2>
+            <p>Book straight with the host. Secure Midtrans payment with QRIS, bank transfer or e-wallet. Auto-confirmation within minutes — and a better rate than any aggregator because there is no commission to clip.</p>
+
+            <div className="price-card">
+              <div className="price-top">
+                <div>
+                  <div className="price-amount serif">{fmtIDR(NIGHTLY).replace('Rp ', 'Rp\u00A0')}<sub> /night</sub></div>
+                  <div className="price-period">Tax included · 2-night minimum</div>
+                </div>
+                <div style={{textAlign:'right'}}>
+                  <div className="testi-stars" style={{color:'var(--accent-soft)'}}>★★★★★</div>
+                  <div className="price-period" style={{marginTop:'0.4rem'}}>4.9 · 47 stays</div>
+                </div>
+              </div>
+              <div className="price-detail"><span>Check-in</span><strong>3:00 PM</strong></div>
+              <div className="price-detail"><span>Check-out</span><strong>12:00 PM</strong></div>
+              <div className="price-detail"><span>Cleaning fee (one-time)</span><strong>{fmtIDR(CLEANING)}</strong></div>
+              <div className="price-detail"><span>Cancellation</span><strong>Free · 7 days prior</strong></div>
+            </div>
+          </div>
+
+          <form className="booking-form reveal reveal-delay-1" onSubmit={handleBook}>
+            <div className="form-title">Reserve your stay</div>
+            <div className="form-sub">We confirm within the hour — usually under 10 minutes.</div>
+
+            <div className="date-block">
+              <div className={`date-cell ${calOpen ? 'active' : ''}`} onClick={() => setCalOpen(true)}>
+                <label>Check-in</label>
+                <div className="date-val serif">{checkIn ? fmtNice(checkIn) : 'Pick a date'}</div>
+                <div className="date-sub">{checkIn ? fmtWeekday(checkIn) + ' · 3:00 PM' : '\u00A0'}</div>
+              </div>
+              <div className={`date-cell ${calOpen ? 'active' : ''}`} onClick={() => setCalOpen(true)}>
+                <label>Check-out</label>
+                <div className="date-val serif">{checkOut ? fmtNice(checkOut) : 'Pick a date'}</div>
+                <div className="date-sub">{checkOut ? fmtWeekday(checkOut) + ' · 12:00 PM' : '\u00A0'}</div>
+              </div>
+            </div>
+
+            {calOpen && (
+              <Calendar
+                checkIn={checkIn}
+                checkOut={checkOut}
+                onPickIn={setCheckIn}
+                onPickOut={setCheckOut}
+                bookedDates={bookedDates}
+              />
+            )}
+
+            <div className="form-row">
+              <div className="form-field">
+                <label>Guests</label>
+                <select value={guests} onChange={(e) => setGuests(Number(e.target.value))}>
+                  <option value="1">1 guest</option>
+                  <option value="2">2 guests</option>
+                  <option value="3">3 guests</option>
+                  <option value="4">4 guests</option>
+                </select>
+              </div>
+              <div className="form-field">
+                <label>Phone</label>
+                <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)}
+                       placeholder="+62 8xx xxxx xxxx" />
+              </div>
+              <div className="form-field form-field-full">
+                <label>Full name</label>
+                <input type="text" value={name} onChange={(e) => setName(e.target.value)}
+                       placeholder="As on your ID" />
+              </div>
+              <div className="form-field form-field-full">
+                <label>Email</label>
+                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}
+                       placeholder="you@email.com" />
+              </div>
+            </div>
+
+            <div className="summary-box">
+              {nights > 0 ? (
+                <>
+                  <div className="summary-line">
+                    <span>{fmtIDR(NIGHTLY)} × {nights} {nights === 1 ? 'night' : 'nights'}</span>
+                    <span>{fmtIDR(subtotal)}</span>
+                  </div>
+                  <div className="summary-line">
+                    <span>Cleaning fee</span>
+                    <span>{fmtIDR(CLEANING)}</span>
+                  </div>
+                  <div className="summary-line">
+                    <span>Taxes</span>
+                    <span>Included</span>
+                  </div>
+                  <div className="summary-total">
+                    <span>Total</span>
+                    <span className="num">{fmtIDR(total)}</span>
+                  </div>
+                </>
+              ) : (
+                <div className="summary-line" style={{color:'var(--accent)', padding: '0.4rem 0'}}>
+                  <span>Select your dates to see total</span>
+                </div>
+              )}
+            </div>
+
+            <button className="book-btn" type="submit" disabled={!valid}>
+              {nights < MIN_STAY ? `Minimum stay ${MIN_STAY} nights` :
+               !valid ? 'Fill in your details' :
+               <>Pay {fmtIDR(total)} via Midtrans <span>→</span></>}
+            </button>
+            <div className="payment-note">
+              <span>🔒</span>
+              <span>Secured by</span>
+              <div className="payment-methods">
+                <span className="pm-pill">QRIS</span>
+                <span className="pm-pill">Bank</span>
+                <span className="pm-pill">E-Wallet</span>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── Midtrans modal — multi-step ───────────────────────────────────────────
+function MidtransModal({ open, onClose, booking }) {
+  const [step, setStep] = useState(0);          // 0 = choose method, 1 = QR / detail, 2 = success
+  const [method, setMethod] = useState('qris');
+  const [timeLeft, setTimeLeft] = useState(890); // ~15min countdown
+
+  useEffect(() => {
+    if (!open) { setStep(0); setTimeLeft(890); return; }
+    const onEsc = (e) => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', onEsc);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', onEsc);
+      document.body.style.overflow = '';
+    };
+  }, [open, onClose]);
+
+  useEffect(() => {
+    if (!open || step !== 1) return;
+    const t = setInterval(() => setTimeLeft((s) => Math.max(0, s - 1)), 1000);
+    return () => clearInterval(t);
+  }, [open, step]);
+
+  // Auto-progress to success after 4s on the QR screen for demo flavour
+  useEffect(() => {
+    if (step !== 1 || !open) return;
+    const t = setTimeout(() => setStep(2), 5400);
+    return () => clearTimeout(t);
+  }, [step, open]);
+
+  if (!booking) return null;
+
+  const minutes = Math.floor(timeLeft / 60);
+  const seconds = String(timeLeft % 60).padStart(2,'0');
+
+  const methods = [
+    { id: 'qris', name: 'QRIS', sub: 'GoPay · OVO · Dana · ShopeePay · all banks', tag: 'QR' },
+    { id: 'va', name: 'Bank transfer (VA)', sub: 'BCA · Mandiri · BNI · BRI', tag: 'VA' },
+    { id: 'ewallet', name: 'E-Wallet', sub: 'GoPay, OVO, Dana, ShopeePay', tag: 'EW' },
+    { id: 'cc', name: 'Credit / Debit card', sub: 'Visa, Mastercard, JCB', tag: 'CC' },
+  ];
+
+  return (
+    <div className={`mt-backdrop ${open ? 'open' : ''}`} onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}>
+      <div className="mt-modal" data-noncommentable="" role="dialog" aria-modal="true">
+        <div className="mt-head">
+          <div className="mt-brand">
+            <div className="mt-logo">M</div>
+            <span>Midtrans Secure Checkout</span>
+          </div>
+          <button className="mt-close" onClick={onClose} aria-label="Close">✕</button>
+        </div>
+
+        <div className="mt-body">
+          {step === 0 && (
+            <>
+              <div className="mt-amount">
+                <div>
+                  <div className="mt-label">Casa Riviera · {booking.nights} {booking.nights === 1 ? 'night' : 'nights'}</div>
+                  <div className="mt-val serif">{fmtIDR(booking.total)}</div>
+                </div>
+                <div style={{textAlign:'right', fontSize: '0.78rem', color: 'var(--ink-soft)'}}>
+                  <div>{fmtNice(booking.checkIn)}</div>
+                  <div>→ {fmtNice(booking.checkOut)}</div>
+                </div>
+              </div>
+
+              <div style={{fontSize:'0.78rem', color:'var(--ink-soft)', letterSpacing:'0.06em',
+                           textTransform:'uppercase', marginTop:'0.5rem'}}>Choose payment method</div>
+
+              <div className="mt-methods">
+                {methods.map((m) => (
+                  <div key={m.id}
+                       className={`mt-method ${method === m.id ? 'selected' : ''}`}
+                       onClick={() => setMethod(m.id)}>
+                    <div className="mt-method-left">
+                      <div className="mt-method-icon">{m.tag}</div>
+                      <div>
+                        <div className="mt-method-name">{m.name}</div>
+                        <div className="mt-method-sub">{m.sub}</div>
+                      </div>
+                    </div>
+                    <div className="mt-check">{method === m.id ? '✓' : ''}</div>
+                  </div>
+                ))}
+              </div>
+
+              <button className="mt-pay-btn" onClick={() => setStep(1)}>
+                Continue with {methods.find((x) => x.id === method).name}
+              </button>
+            </>
+          )}
+
+          {step === 1 && (
+            <>
+              <div className="mt-amount">
+                <div>
+                  <div className="mt-label">Amount due</div>
+                  <div className="mt-val serif">{fmtIDR(booking.total)}</div>
+                </div>
+                <div style={{textAlign:'right'}}>
+                  <div style={{fontSize:'0.7rem', color:'var(--ink-soft)', textTransform:'uppercase', letterSpacing:'0.1em'}}>Expires in</div>
+                  <div className="mt-timer serif">{minutes}:{seconds}</div>
+                </div>
+              </div>
+
+              {method === 'qris' && (
+                <div className="mt-qr-wrap">
+                  <div style={{fontSize:'0.84rem', color:'var(--ink-soft)', textAlign:'center'}}>
+                    Scan with any QRIS-enabled app
+                  </div>
+                  <div className="mt-qr">
+                    <Art.FakeQR />
+                  </div>
+                  <div style={{display:'flex', gap:'0.4rem', flexWrap:'wrap', justifyContent:'center'}}>
+                    <span className="pm-pill" style={{borderColor:'var(--line-strong)'}}>GoPay</span>
+                    <span className="pm-pill" style={{borderColor:'var(--line-strong)'}}>OVO</span>
+                    <span className="pm-pill" style={{borderColor:'var(--line-strong)'}}>Dana</span>
+                    <span className="pm-pill" style={{borderColor:'var(--line-strong)'}}>ShopeePay</span>
+                    <span className="pm-pill" style={{borderColor:'var(--line-strong)'}}>Banks</span>
+                  </div>
+                  <div style={{fontSize:'0.78rem', color:'var(--ink-mute)', textAlign:'center', maxWidth:'24rem'}}>
+                    Waiting for payment confirmation… (demo will auto-confirm)
+                  </div>
+                </div>
+              )}
+
+              {method === 'va' && (
+                <div style={{display:'flex',flexDirection:'column',gap:'0.7rem'}}>
+                  <div style={{fontSize:'0.84rem', color:'var(--ink-soft)'}}>
+                    Transfer to the following Virtual Account before the timer runs out:
+                  </div>
+                  <div style={{padding:'1.1rem 1.2rem', background:'var(--paper)', border:'1px solid var(--line)', borderRadius:'8px'}}>
+                    <div style={{fontSize:'0.7rem', textTransform:'uppercase', letterSpacing:'0.1em', color:'var(--ink-soft)'}}>BCA Virtual Account</div>
+                    <div style={{fontFamily:'var(--serif)', fontSize:'1.6rem', letterSpacing:'-0.01em', marginTop:'0.2rem'}}>
+                      8077 8492 0091 7634
+                    </div>
+                  </div>
+                  <div style={{fontSize:'0.78rem', color:'var(--ink-mute)', textAlign:'center'}}>
+                    Demo: waiting for transfer (will auto-confirm).
+                  </div>
+                </div>
+              )}
+
+              {method === 'ewallet' && (
+                <div style={{display:'flex',flexDirection:'column',gap:'0.7rem'}}>
+                  <div style={{fontSize:'0.84rem', color:'var(--ink-soft)'}}>
+                    A push notification has been sent to your e-wallet. Open the app and authorise the payment.
+                  </div>
+                  <div style={{padding:'1.4rem', background:'var(--paper)', border:'1px solid var(--line)', borderRadius:'8px', textAlign:'center'}}>
+                    <div style={{fontFamily:'var(--serif)', fontSize:'2.4rem'}}>📱</div>
+                    <div style={{fontSize:'0.88rem', color:'var(--ink-soft)', marginTop:'0.5rem'}}>
+                      Open your wallet app to confirm
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {method === 'cc' && (
+                <div style={{display:'flex',flexDirection:'column',gap:'0.7rem'}}>
+                  <div style={{padding:'1.4rem', background:'var(--paper)', border:'1px solid var(--line)', borderRadius:'8px', textAlign:'center'}}>
+                    <div style={{fontSize:'0.84rem', color:'var(--ink-soft)'}}>
+                      Redirecting to 3D Secure card form…
+                    </div>
+                    <div style={{marginTop:'1rem',height:'4px',background:'var(--bg-alt)',borderRadius:'4px',overflow:'hidden'}}>
+                      <div style={{height:'100%', width:'60%', background:'var(--accent)',animation:'pulse 1.4s ease-in-out infinite'}} />
+                    </div>
+                  </div>
+                </div>
+              )}
+            </>
+          )}
+
+          {step === 2 && (
+            <div className="mt-success">
+              <div className="mt-check-big">✓</div>
+              <h3 className="serif">Payment confirmed</h3>
+              <p>We've sent a receipt and check-in instructions to <strong style={{color:'var(--ink)'}}>{booking.email}</strong>. Your host will message you within the hour.</p>
+              <div style={{display:'flex', gap:'0.5rem', marginTop:'0.9rem'}}>
+                <button className="mt-pay-btn" style={{padding:'0.85rem 1.4rem', width:'auto'}} onClick={onClose}>
+                  Done
+                </button>
+              </div>
+              <div style={{fontSize:'0.78rem', color:'var(--ink-mute)', marginTop:'0.6rem'}}>
+                Booking ID · CSR-{Math.floor(Math.random() * 90000 + 10000)}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+
+
+const bookingHelpers = { fmtIDR, fmtNice, diffDays, addDays, startOfDay };
+
+
+// sections.jsx — gallery + lightbox, host, neighborhood, testimonials, rules, FAQ, trust, footer.
+
+// (removed duplicate React destructure)
+// ── Hero ─────────────────────────────────────────────────────────────────
+function Hero({ layout, onCheck }) {
+  // (use outer Art)
+  return (
+    <section className="hero" data-layout={layout} data-screen-label="01 Hero">
+      <div className="container">
+        <div className="hero-grid">
+          <div className="hero-content reveal">
+            <span className="hero-tag">
+              <span className="pulse" /> Available this month · Cikarang
+            </span>
+            <h1 className="hero-title">
+              A premium stay that{' '}
+              <em>feels like home</em>{layout !== 'centered' ? <>,</> : ''}<br />
+              {layout === 'centered' ? 'served with hotel discipline.' : 'with hotel discipline.'}
+            </h1>
+            <p className="hero-lead">
+              A modern 2-bedroom apartment on a high floor of Meikarta Riviera District 2. Fully furnished, panoramic city view, and direct access to Central Park and the mall.
+            </p>
+
+            <div className="hero-meta">
+              <div className="hero-meta-item">
+                <span className="hero-meta-label">Bedrooms</span>
+                <span className="hero-meta-value serif">2 BR</span>
+              </div>
+              <div className="hero-meta-item">
+                <span className="hero-meta-label">Floor area</span>
+                <span className="hero-meta-value serif">48 m²</span>
+              </div>
+              <div className="hero-meta-item">
+                <span className="hero-meta-label">Sleeps</span>
+                <span className="hero-meta-value serif">4 guests</span>
+              </div>
+              <div className="hero-meta-item">
+                <span className="hero-meta-label">Floor</span>
+                <span className="hero-meta-value serif">High · 32F</span>
+              </div>
+            </div>
+
+            <div className="cta-row">
+              <a href="#booking" className="btn btn-primary" onClick={onCheck}>
+                Check availability <span className="arr">→</span>
+              </a>
+              <a href="#gallery" className="btn btn-secondary">
+                See the space
+              </a>
+            </div>
+          </div>
+
+          <div className="hero-gallery reveal reveal-delay-2">
+            <div className="hero-img hero-img-main"><Art.LivingRoom /></div>
+            <div className="hero-img"><Art.Bedroom /></div>
+            <div className="hero-img"><Art.Kitchen /></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── About ────────────────────────────────────────────────────────────────
+function About() {
+  const features = [
+    { t: '2 Bedrooms', s: 'Master + second, AC in both' },
+    { t: 'Full kitchen', s: 'Stove, fridge, microwave' },
+    { t: 'Smart TV', s: 'Netflix & YouTube ready' },
+    { t: 'In-unit laundry', s: 'Washer + detergent provided' },
+    { t: 'Fibre WiFi', s: '100 Mbps, mesh coverage' },
+    { t: 'Pool & gym', s: 'Tower amenity access included' },
+    { t: 'Workspace', s: 'Desk by the window' },
+    { t: 'Touchless check-in', s: 'Smart lock, 24/7 arrival' },
+    { t: '60+ TV channels', s: 'Indihome included' },
+  ];
+  return (
+    <section className="about section-pad" id="about" data-screen-label="02 About">
+      <div className="container">
+        <div className="about-grid">
+          <div className="reveal">
+            <div className="section-label">About the unit</div>
+            <h2 className="section-title">A place to settle in <em>like it's yours</em>.</h2>
+          </div>
+          <div className="about-text reveal reveal-delay-1">
+            <p>Casa Riviera was designed for stays that need to feel residential rather than transactional — quiet floor, considered furniture, the kind of light a well-placed window allows in the afternoon. Equally at home for a family weekend, a working trip into Cikarang, or a couple looking for somewhere unhurried.</p>
+            <p>The 2BR unit is fully furnished and ready: smart TV, full kitchen, washing machine, and direct access to every amenity Riviera District 2 has to offer.</p>
+            <ul className="feature-list">
+              {features.map((f) => (
+                <li key={f.t}><strong>{f.t}</strong><span>{f.s}</span></li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── Gallery + Lightbox ───────────────────────────────────────────────────
+function Gallery({ onOpenLightbox }) {
+  // (use outer Art)
+  const tiles = [
+    { label: 'Living & dining', art: <Art.LivingRoom /> },
+    { label: 'Bedroom', art: <Art.Bedroom /> },
+    { label: 'Kitchen', art: <Art.Kitchen /> },
+    { label: 'Dining nook', art: <Art.Dining /> },
+    { label: 'Tower pool', art: <Art.Pool /> },
+  ];
+  return (
+    <section className="gallery section-pad" id="gallery" data-screen-label="03 Gallery">
+      <div className="container">
+        <div className="gallery-head reveal">
+          <div>
+            <div className="section-label">Gallery</div>
+            <h2 className="section-title">What you'll <em>come home to</em>.</h2>
+          </div>
+          <div className="hint">⌖ Tap any tile to enlarge</div>
+        </div>
+        <div className="gallery-grid reveal reveal-delay-1">
+          {tiles.map((t, i) => (
+            <div key={t.label} className="tile" onClick={() => onOpenLightbox(i)}>
+              {t.art}
+              <span className="tile-label">{t.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Lightbox({ open, index, onClose, onNav }) {
+  // (use outer Art)
+  const slides = [
+    { label: 'Living & dining', art: <Art.LivingRoom /> },
+    { label: 'Bedroom', art: <Art.Bedroom /> },
+    { label: 'Kitchen', art: <Art.Kitchen /> },
+    { label: 'Dining nook', art: <Art.Dining /> },
+    { label: 'Tower pool', art: <Art.Pool /> },
+  ];
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e) => {
+      if (e.key === 'Escape') onClose();
+      else if (e.key === 'ArrowRight') onNav(1);
+      else if (e.key === 'ArrowLeft') onNav(-1);
+    };
+    document.addEventListener('keydown', onKey);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = '';
+    };
+  }, [open, onClose, onNav]);
+  if (!open) return null;
+  const s = slides[index];
+  return (
+    <div className={`lb-backdrop ${open ? 'open' : ''}`} onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}>
+      <div className="lb-frame" data-noncommentable="">
+        <div className="lb-counter">{String(index + 1).padStart(2,'0')} / {String(slides.length).padStart(2,'0')}</div>
+        <button className="lb-close" onClick={onClose} aria-label="Close">✕</button>
+        <button className="lb-nav lb-prev" onClick={() => onNav(-1)} aria-label="Previous">‹</button>
+        <button className="lb-nav lb-next" onClick={() => onNav(1)} aria-label="Next">›</button>
+        {s.art}
+        <div className="lb-cap serif">{s.label}</div>
+      </div>
+    </div>
+  );
+}
+
+// ── Floor plan ───────────────────────────────────────────────────────────
+function FloorPlanSection() {
+  // (use outer Art)
+  return (
+    <section className="floorplan section-pad" id="layout" data-screen-label="04 Floor Plan">
+      <div className="container">
+        <div className="fp-grid">
+          <div className="reveal">
+            <div className="fp-svg"><Art.FloorPlan /></div>
+          </div>
+          <div className="reveal reveal-delay-1">
+            <div className="section-label">Floor plan</div>
+            <h2 className="section-title">48 m² <em>thought through</em>.</h2>
+            <p style={{color:'var(--ink-soft)', maxWidth:'34rem', lineHeight:'1.7'}}>
+              A two-bedroom layout that uses every metre. The living and dining run together along the window, with the master tucked at the quieter end and the second bedroom paired with the bathroom on the opposite side.
+            </p>
+            <dl className="fp-legend">
+              <dt style={{'--swatch': '#f4f0e8'}}>Living &amp; Dining — 22 m²</dt>
+              <dd>Sofa for four, dining for four, panoramic window.</dd>
+              <dt style={{'--swatch': '#ebe4d4'}}>Master Bedroom — 14 m²</dt>
+              <dd>Queen bed, blackout curtain, en-suite-adjacent bath.</dd>
+              <dt style={{'--swatch': '#ebe4d4'}}>Second Bedroom — 10 m²</dt>
+              <dd>Single or twin configuration, wardrobe.</dd>
+              <dt style={{'--swatch': '#ebe4d4'}}>Kitchen — 6 m²</dt>
+              <dd>Two-burner stove, full-size fridge, microwave.</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── Host ─────────────────────────────────────────────────────────────────
+function Host({ onWhatsApp }) {
+  // (use outer Art)
+  return (
+    <section className="host section-pad" data-screen-label="05 Host">
+      <div className="container">
+        <div className="reveal" style={{marginBottom: '2.2rem'}}>
+          <div className="section-label">Your host</div>
+          <h2 className="section-title">Owner-managed. <em>Always on.</em></h2>
+        </div>
+        <div className="host-card reveal reveal-delay-1">
+          <div className="host-avatar"><Art.HostAvatar initial="A" /></div>
+          <div className="host-meta">
+            <div className="host-name serif">Adrian — Casa Riviera</div>
+            <p className="host-bio">Owner and host since 2023. Lives in Jakarta, knows Cikarang well, and answers messages personally — usually within minutes. Speaks Indonesian and English; happy to recommend a coffee shop or arrange airport pickup.</p>
+            <div className="host-stats">
+              <div className="host-stat">
+                <span className="host-stat-num serif">100%</span>
+                <span className="host-stat-label">Response rate</span>
+              </div>
+              <div className="host-stat">
+                <span className="host-stat-num serif">&lt; 10m</span>
+                <span className="host-stat-label">Avg. response</span>
+              </div>
+              <div className="host-stat">
+                <span className="host-stat-num serif">3 yrs</span>
+                <span className="host-stat-label">Hosting</span>
+              </div>
+            </div>
+          </div>
+          <div className="host-actions">
+            <a href="#" onClick={(e) => { e.preventDefault(); onWhatsApp(); }}>
+              <span style={{color:'#1f8a5b'}}>●</span> Chat on WhatsApp
+            </a>
+            <a href="#booking">
+              <span>📅</span> Check dates
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── Neighborhood ─────────────────────────────────────────────────────────
+function Neighborhood() {
+  // (use outer Art)
+  const places = [
+    { ico: '🛍', name: 'Lippo Mall Meikarta', sub: 'Anchor mall, dine + shop + cinema', dist: '3 min walk' },
+    { ico: '🌳', name: 'Central Park Meikarta', sub: 'Jogging track, weekend market', dist: '2 min walk' },
+    { ico: '🚆', name: 'Stasiun LRT Cikarang', sub: 'To Jakarta Bekasi line', dist: '8 min drive' },
+    { ico: '🏨', name: 'Movenpick Hotel', sub: 'Fine dining, spa', dist: '4 min drive' },
+    { ico: '🛬', name: 'Kertajati / Halim airports', sub: 'Domestic gateways', dist: '50–80 min' },
+    { ico: '☕', name: 'Coffee at Foresta', sub: 'Specialty cafés, co-working', dist: '6 min drive' },
+  ];
+  return (
+    <section className="neigh section-pad" id="neighborhood" data-screen-label="06 Neighborhood">
+      <div className="container">
+        <div style={{marginBottom: '2.4rem'}} className="reveal">
+          <div className="section-label">Around the tower</div>
+          <h2 className="section-title">Everything <em>within reach</em>.</h2>
+        </div>
+        <div className="neigh-grid">
+          <div className="neigh-map reveal"><Art.NeighMap /></div>
+          <div className="neigh-list reveal reveal-delay-1">
+            {places.map((p) => (
+              <div className="neigh-item" key={p.name}>
+                <div className="neigh-icon">{p.ico}</div>
+                <div>
+                  <div className="neigh-name serif">{p.name}</div>
+                  <div className="neigh-sub">{p.sub}</div>
+                </div>
+                <div className="neigh-dist serif">{p.dist}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── Testimonials carousel ────────────────────────────────────────────────
+function Testimonials() {
+  const reviews = [
+    { name: 'Priscilla H.', sub: 'Jakarta · Family stay · 4 nights',
+      quote: 'Felt residential rather than transactional. Beds were excellent and the kitchen was actually usable — we cooked twice. Adrian was reachable the whole time without ever being intrusive.',
+      initial: 'P' },
+    { name: 'Bayu R.', sub: 'Surabaya · Business trip · 3 nights',
+      quote: 'Quiet floor, fast WiFi, good desk by the window. I worked four full days here and forgot it wasn\'t my apartment.',
+      initial: 'B' },
+    { name: 'Lina & Hadi', sub: 'Bandung · Anniversary · 2 nights',
+      quote: 'The view at sunset is genuinely lovely. Touchless check-in worked, every small thing you\'d want was already there.',
+      initial: 'L' },
+    { name: 'Kenji T.', sub: 'Tokyo · Visiting partner · 5 nights',
+      quote: 'My Japanese standards for cleanliness are uncompromising. This unit met them. Recommended.',
+      initial: 'K' },
+    { name: 'Sari D.', sub: 'Jakarta · Weekend · 2 nights',
+      quote: 'The mall is genuinely two minutes on foot. We ate well, slept well, did nothing. Will book again.',
+      initial: 'S' },
+  ];
+  const [index, setIndex] = useState(0);
+  const trackRef = useRef(null);
+  const [perView, setPerView] = useState(1);
+
+  useEffect(() => {
+    const calc = () => {
+      const w = window.innerWidth;
+      setPerView(w >= 1080 ? 3 : w >= 720 ? 2 : 1);
+    };
+    calc();
+    window.addEventListener('resize', calc);
+    return () => window.removeEventListener('resize', calc);
+  }, []);
+
+  const max = Math.max(0, reviews.length - perView);
+  const safeIdx = Math.min(index, max);
+  const translate = -(safeIdx * (100 / perView));
+
+  return (
+    <section className="testi section-pad" id="reviews" data-screen-label="07 Reviews">
+      <div className="container">
+        <div className="testi-head reveal">
+          <div>
+            <div className="section-label">Guest reviews</div>
+            <h2 className="section-title">From the people who've <em>stayed here</em>.</h2>
+          </div>
+          <div style={{textAlign: 'right'}}>
+            <div className="serif" style={{fontSize:'2.8rem', lineHeight: '1', letterSpacing: '-0.03em'}}>4.9</div>
+            <div className="testi-stars" style={{margin: '0.3rem 0'}}>★★★★★</div>
+            <div style={{fontSize:'0.82rem', color:'var(--ink-soft)'}}>From 47 verified stays</div>
+          </div>
+        </div>
+
+        <div className="testi-track-wrap reveal reveal-delay-1">
+          <div className="testi-track" ref={trackRef}
+               style={{transform: `translateX(calc(${translate}% - ${safeIdx > 0 ? '0.7rem' : '0'}))`}}>
+            {reviews.map((r) => (
+              <div className="testi-card" key={r.name}>
+                <div className="testi-stars">★★★★★</div>
+                <div className="testi-quote">"{r.quote}"</div>
+                <div className="testi-meta">
+                  <div className="testi-avatar">{r.initial}</div>
+                  <div>
+                    <div className="testi-name">{r.name}</div>
+                    <div className="testi-sub">{r.sub}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="testi-controls">
+          <button onClick={() => setIndex(Math.max(0, safeIdx - 1))} disabled={safeIdx === 0} aria-label="Previous">‹</button>
+          <button onClick={() => setIndex(Math.min(max, safeIdx + 1))} disabled={safeIdx === max} aria-label="Next">›</button>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── House rules / check-in ───────────────────────────────────────────────
+function HouseRules() {
+  return (
+    <section className="rules section-pad" id="rules" data-screen-label="08 House Rules">
+      <div className="container">
+        <div className="rules-grid">
+          <div className="reveal">
+            <div className="section-label">House rules &amp; check-in</div>
+            <h2 className="section-title">Clear, <em>simple</em>, friendly.</h2>
+            <p style={{color:'var(--ink-soft)', lineHeight:'1.7', marginTop:'1rem', maxWidth:'30rem'}}>
+              Everything you need to know before you arrive — no surprises, no fine print. Full check-in instructions are sent the day before by email and WhatsApp.
+            </p>
+          </div>
+          <div className="reveal reveal-delay-1">
+            <div className="rule-block">
+              <div className="rule-card">
+                <div className="rc-label">Check-in</div>
+                <div className="rc-val serif">3:00 PM</div>
+                <div className="rc-sub">Touchless — smart lock code sent on arrival day</div>
+              </div>
+              <div className="rule-card">
+                <div className="rc-label">Check-out</div>
+                <div className="rc-val serif">12:00 PM</div>
+                <div className="rc-sub">Late check-out by request, subject to availability</div>
+              </div>
+              <div className="rule-card">
+                <div className="rc-label">Minimum stay</div>
+                <div className="rc-val serif">2 nights</div>
+                <div className="rc-sub">Three or more nights get a small discount — just ask</div>
+              </div>
+              <div className="rule-card">
+                <div className="rc-label">Max guests</div>
+                <div className="rc-val serif">4 adults</div>
+                <div className="rc-sub">2 children stay free; cot available on request</div>
+              </div>
+            </div>
+            <ul className="rule-list">
+              <li>No smoking inside the unit; designated areas on the floor.</li>
+              <li>No parties or events — this is a residential building.</li>
+              <li>Pets considered on request, with a small deposit.</li>
+              <li>Government-issued ID required at booking (Indonesian or passport).</li>
+              <li>Free cancellation up to 7 days before check-in.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── FAQ ──────────────────────────────────────────────────────────────────
+function FAQ() {
+  const items = [
+    { q: 'How do I check in?',
+      a: 'Touchless. The day before arrival, we send your smart-lock code and a short video walkthrough by email and WhatsApp. You go straight to the unit — no front desk, no key handover.' },
+    { q: 'Is parking included?',
+      a: 'Yes — one parking slot in the tower is included, no extra fee. Additional slots can be reserved subject to availability for Rp 25,000/night.' },
+    { q: 'Can I get an invoice for company reimbursement?',
+      a: 'Of course. After payment, reply to your receipt email with your company name and NPWP and we\'ll issue a formal invoice the same day.' },
+    { q: 'Is the building safe at night?',
+      a: 'Riviera District 2 is a serviced residential tower with 24/7 security, CCTV, and access-controlled lifts. The neighbourhood is well-lit and residential.' },
+    { q: 'Do you offer airport / station pickup?',
+      a: 'Yes, on request — fixed rate from Soekarno-Hatta (Rp 350,000) or Halim (Rp 250,000). Just message us with your flight details.' },
+    { q: 'What if something goes wrong during my stay?',
+      a: 'Message us on WhatsApp — we typically respond in minutes. We also keep a small toolkit, spare bulbs and back-up linen in the unit for anything trivial.' },
+  ];
+  const [open, setOpen] = useState(0);
+  return (
+    <section className="faq section-pad" id="faq" data-screen-label="09 FAQ">
+      <div className="container">
+        <div className="faq-grid">
+          <div className="reveal">
+            <div className="section-label">Questions</div>
+            <h2 className="section-title">Good to know <em>before you book</em>.</h2>
+          </div>
+          <div className="faq-list reveal reveal-delay-1">
+            {items.map((it, i) => (
+              <div key={it.q} className={`faq-item ${open === i ? 'open' : ''}`}
+                   onClick={() => setOpen(open === i ? -1 : i)}>
+                <div className="faq-q">
+                  <span>{it.q}</span>
+                  <span className="faq-toggle">+</span>
+                </div>
+                <div className="faq-a">{it.a}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── Trust ────────────────────────────────────────────────────────────────
+function Trust() {
+  return (
+    <section className="trust" data-screen-label="10 Trust">
+      <div className="container">
+        <div className="trust-title serif reveal">Trusted by guests across Indonesia.</div>
+        <div className="trust-sub reveal">Owner-managed since 2023 · No platform fees · No middlemen.</div>
+        <div className="trust-grid">
+          <div className="trust-item reveal">
+            <div className="trust-num serif">4.9</div>
+            <div className="trust-label">Rating from 47 verified guests</div>
+          </div>
+          <div className="trust-item reveal reveal-delay-1">
+            <div className="trust-num serif">98%</div>
+            <div className="trust-label">Of guests would recommend us</div>
+          </div>
+          <div className="trust-item reveal reveal-delay-2">
+            <div className="trust-num serif">&lt;10m</div>
+            <div className="trust-label">Average host response time</div>
+          </div>
+          <div className="trust-item reveal reveal-delay-3">
+            <div className="trust-num serif">100%</div>
+            <div className="trust-label">Secure payment via Midtrans</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── Footer ───────────────────────────────────────────────────────────────
+function Footer() {
+  return (
+    <footer data-screen-label="11 Footer">
+      <div className="container">
+        <div className="foot-grid">
+          <div>
+            <div className="foot-brand">Casa <em>Riviera</em></div>
+            <div className="foot-tag">A premium 2-bedroom stay at Meikarta Riviera District 2, Cikarang — owner-managed, directly bookable, no platform fees.</div>
+          </div>
+          <div>
+            <div className="foot-h">Explore</div>
+            <ul className="foot-list">
+              <li><a href="#about">The unit</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#layout">Floor plan</a></li>
+              <li><a href="#neighborhood">Neighborhood</a></li>
+            </ul>
+          </div>
+          <div>
+            <div className="foot-h">Stay</div>
+            <ul className="foot-list">
+              <li><a href="#booking">Book</a></li>
+              <li><a href="#rules">House rules</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#reviews">Reviews</a></li>
+            </ul>
+          </div>
+          <div>
+            <div className="foot-h">Contact</div>
+            <ul className="foot-list">
+              <li>WhatsApp +62 812-3456-7890</li>
+              <li>hello@casariviera.id</li>
+              <li>Riviera D2, Meikarta, Cikarang</li>
+            </ul>
+          </div>
+        </div>
+        <div className="foot-bottom">
+          <span>© 2026 Casa Riviera · All rights reserved</span>
+          <span>Powered by asacasastay.com</span>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+// ── Sticky mobile booking bar ────────────────────────────────────────────
+function StickyBook({ total, nights, onClick }) {
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const onScroll = () => {
+      const y = window.scrollY;
+      const isMobile = window.innerWidth < 880;
+      const booking = document.getElementById('booking');
+      const footer = document.querySelector('footer');
+      let beforeBooking = true;
+      let pastFooter = false;
+      if (booking) {
+        const rect = booking.getBoundingClientRect();
+        beforeBooking = rect.top > window.innerHeight * 0.4;
+      }
+      if (footer) {
+        const r = footer.getBoundingClientRect();
+        pastFooter = r.top < window.innerHeight * 0.7;
+      }
+      setVisible(isMobile && y > window.innerHeight * 0.6 && beforeBooking && !pastFooter);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    onScroll();
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    };
+  }, []);
+  const { fmtIDR } = bookingHelpers;
+  return (
+    <div className={`sticky-book ${visible ? 'visible' : ''}`}>
+      <div>
+        <div className="sb-price serif">
+          {nights > 0 ? fmtIDR(total) : 'Rp 750.000'}
+        </div>
+        <div className="sb-sub">{nights > 0 ? `${nights} ${nights === 1 ? 'night' : 'nights'} total` : 'per night'}</div>
+      </div>
+      <button onClick={onClick}>Reserve</button>
+    </div>
+  );
+}
+
+// ── WhatsApp floating CTA ────────────────────────────────────────────────
+function WhatsAppFab({ onClick }) {
+  return (
+    <a className="wa-fab" href="#" onClick={(e) => { e.preventDefault(); onClick(); }}
+       aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true">
+        <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.6 14.3c-.2.7-1.2 1.3-2 1.4-.5.1-1.2.2-3.7-.8-3.2-1.3-5.2-4.6-5.4-4.8-.2-.2-1.3-1.7-1.3-3.2 0-1.5.8-2.3 1.1-2.6.3-.3.6-.4.8-.4h.6c.2 0 .5-.1.7.5.3.7 1 2.3 1.1 2.4.1.2.1.4 0 .6-.1.2-.2.3-.4.5l-.5.6c-.2.2-.4.4-.2.7.2.3.9 1.5 1.9 2.4 1.3 1.1 2.4 1.5 2.7 1.6.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.2.7-.1.3.1 1.9.9 2.2 1.1.3.2.5.2.6.4.1.2.1.9-.1 1.6z"/>
+      </svg>
+    </a>
+  );
+}
+
+// ── Nav ──────────────────────────────────────────────────────────────────
+function Nav({ onBook }) {
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+  return (
+    <nav className={`nav ${scrolled ? 'scrolled' : ''}`}>
+      <div className="container nav-inner">
+        <div className="brand">Casa <em>Riviera</em></div>
+        <div className="nav-links">
+          <a href="#about">The unit</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#layout">Layout</a>
+          <a href="#neighborhood">Nearby</a>
+          <a href="#reviews">Reviews</a>
+        </div>
+        <button className="nav-cta" onClick={onBook}>
+          Reserve <span style={{fontSize:'0.85rem'}}>→</span>
+        </button>
+      </div>
+    </nav>
+  );
+}
+
+
+
+
+// ─────────────────────────────────────────────────────────────────────────
+// App — root composition, variant switching, modal state
+// ─────────────────────────────────────────────────────────────────────────
+
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "variant": "minimal",
+  "heroLayout": "split",
+  "palette": ["#8b3a1d", "#c08c4c", "#f4f0e8"]
+}/*EDITMODE-END*/;
+
+function App() {
+  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+  const [bookingTotals, setBookingTotals] = useState({ total: 0, nights: 0 });
+  const [lbOpen, setLbOpen] = useState(false);
+  const [lbIndex, setLbIndex] = useState(0);
+  const [mtOpen, setMtOpen] = useState(false);
+  const [mtBooking, setMtBooking] = useState(null);
+
+  // Apply variant to <body> so CSS variants attach via attribute selectors
+  useEffect(() => {
+    document.body.dataset.variant = t.variant;
+  }, [t.variant]);
+
+  // Reveal-on-scroll using IntersectionObserver
+  useEffect(() => {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, [t.heroLayout, t.variant]);
+
+  const openLightbox = (i) => { setLbIndex(i); setLbOpen(true); };
+  const navLb = (delta) => setLbIndex((i) => {
+    const n = 5;          // # of gallery tiles
+    return ((i + delta) % n + n) % n;
+  });
+
+  const openModalFromForm = (b) => { setMtBooking(b); setMtOpen(true); };
+  const openModalFromSticky = () => {
+    const el = document.getElementById('booking');
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+  const openWhatsApp = () => {
+    window.open('https://wa.me/6281234567890?text=' + encodeURIComponent('Hi, I\'d like to ask about Casa Riviera at Meikarta D2.'), '_blank');
+  };
+
+  return (
+    <>
+      <Nav onBook={openModalFromSticky} />
+      <Hero layout={t.heroLayout} onCheck={() => {}} />
+      <About />
+      <Gallery onOpenLightbox={openLightbox} />
+      <FloorPlanSection />
+      <Host onWhatsApp={openWhatsApp} />
+      <Neighborhood />
+      <BookingSection onTotalChange={setBookingTotals} openModal={openModalFromForm} />
+      <Testimonials />
+      <HouseRules />
+      <FAQ />
+      <Trust />
+      <Footer />
+
+      <Lightbox open={lbOpen} index={lbIndex} onClose={() => setLbOpen(false)} onNav={navLb} />
+      <MidtransModal open={mtOpen} onClose={() => setMtOpen(false)} booking={mtBooking} />
+      <StickyBook total={bookingTotals.total} nights={bookingTotals.nights} onClick={openModalFromSticky} />
+      <WhatsAppFab onClick={openWhatsApp} />
+
+      <TweaksPanel title="Tweaks">
+        <TweakSection label="Style">
+          <TweakRadio label="Variant" value={t.variant}
+                      options={['minimal','editorial','playful']}
+                      onChange={(v) => setTweak('variant', v)} />
+        </TweakSection>
+        <TweakSection label="Hero">
+          <TweakRadio label="Layout" value={t.heroLayout}
+                      options={['split','centered','fullbleed']}
+                      onChange={(v) => setTweak('heroLayout', v)} />
+        </TweakSection>
+      </TweaksPanel>
+    </>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+
 </script>
-
 </body>
 </html>
