@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Riviera — Premium 2BR Stay at Meikarta D2</title>
+    <meta name="description" content="Modern 2-bedroom apartment with panoramic view at Meikarta Riviera District 2. Booking langsung, no platform fees.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f4f0e8;
+            --bg-alt: #ebe4d4;
+            --ink: #1c1c1a;
+            --ink-soft: #5a5651;
+            --accent: #8b3a1d;
+            --accent-soft: #c08c4c;
+            --line: rgba(28,28,26,0.12);
+            --paper: #fbf8f2;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter Tight', sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.55;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        .serif { font-family: 'Fraunces', serif; }
+
+        img { max-width: 100%; display: block; }
+
+        a { color: inherit; text-decoration: none; }
+
+        /* ───── Header ───── */
+        .nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            padding: 1.4rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(244, 240, 232, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .brand {
+            font-family: 'Fraunces', serif;
+            font-size: 1.35rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+        }
+
+        .brand span { color: var(--accent); font-style: italic; }
+
+        .nav-meta {
+            font-size: 0.78rem;
+            color: var(--ink-soft);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        /* ───── Hero ───── */
+        .hero {
+            min-height: 100vh;
+            padding: 7rem 2rem 4rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 30%; right: -15%;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(192,140,76,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.72rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--ink-soft);
+            margin-bottom: 1.8rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--line);
+            border-radius: 100px;
+            background: var(--paper);
+        }
+
+        .hero-tag::before {
+            content: '';
+            width: 6px; height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .hero h1 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.8rem, 8vw, 5.5rem);
+            font-weight: 400;
+            line-height: 0.95;
+            letter-spacing: -0.035em;
+            margin-bottom: 1.8rem;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--accent);
+            font-weight: 300;
+        }
+
+        .hero p.lead {
+            font-size: 1.1rem;
+            color: var(--ink-soft);
+            max-width: 32rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.65;
+        }
+
+        .hero-meta {
+            display: flex;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--line);
+        }
+
+        .hero-meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+
+        .hero-meta-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--ink-soft);
+        }
+
+        .hero-meta-value {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+        .cta-row {
+            margin-top: 2.5rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 1.8rem;
+            font-family: 'Inter Tight', sans-serif;
+            font-weight: 500;
+            font-size: 0.92rem;
+            letter-spacing: 0.02em;
+            border: none;
+            cursor: pointer;
+            border-radius: 100px;
+            transition: all 0.25s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .btn-primary {
+            background: var(--ink);
+            color: var(--bg);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--ink);
+            border: 1px solid var(--ink);
+        }
+
+        .btn-secondary:hover {
+            background: var(--ink);
+            color: var(--bg);
+        }
+
+        .btn-arrow {
+            font-size: 1.1rem;
+            transition: transform 0.25s;
+        }
+
+        .btn:hover .btn-arrow { transform: translateX(3px); }
+
+        /* ───── Hero gallery ───── */
+        .hero-gallery {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            grid-template-rows: 240px 180px;
+            gap: 0.8rem;
+        }
+
+        .hero-img {
+            background: var(--bg-alt);
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+
+        .hero-img-main {
+            grid-row: 1 / 3;
+        }
+
+        .hero-img svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        @media (min-width: 880px) {
+            .hero {
+                grid-template-columns: 1.05fr 1fr;
+                padding: 8rem 4rem 6rem;
+            }
+            .hero-gallery {
+                grid-template-rows: 280px 220px;
+                gap: 1rem;
+            }
+        }
+
+        /* ───── Section base ───── */
+        section {
+            padding: 5rem 2rem;
+            position: relative;
+        }
+
+        @media (min-width: 880px) {
+            section { padding: 7rem 4rem; }
+        }
+
+        .section-label {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: var(--accent);
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .section-label::before {
+            content: '';
+            width: 24px; height: 1px;
+            background: var(--accent);
+        }
+
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 400;
+            letter-spacing: -0.025em;
+            line-height: 1.05;
+            margin-bottom: 1.2rem;
+        }
+
+        .section-title em {
+            font-style: italic;
+            color: var(--accent);
+        }
+
+        /* ───── About ───── */
+        .about {
+            background: var(--paper);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 880px) {
+            .about-grid {
+                grid-template-columns: 1fr 1.2fr;
+                gap: 6rem;
+            }
+        }
+
+        .about-text p {
+            color: var(--ink-soft);
+            font-size: 1.02rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.75;
+        }
+
+        .feature-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.4rem;
+            margin-top: 2rem;
+        }
+
+        .feature-list li {
+            padding-top: 1rem;
+            border-top: 1px solid var(--line);
+            font-size: 0.92rem;
+        }
+
+        .feature-list li strong {
+            display: block;
+            font-family: 'Fraunces', serif;
+            font-size: 1.05rem;
+            font-weight: 500;
+            margin-bottom: 0.2rem;
+        }
+
+        .feature-list li span {
+            color: var(--ink-soft);
+            font-size: 0.85rem;
+        }
+
+        /* ───── Gallery ───── */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-auto-rows: 160px;
+            gap: 0.8rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-grid > div {
+            background: var(--bg-alt);
+            border-radius: 6px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-grid > div:nth-child(1) { grid-column: span 4; grid-row: span 2; }
+        .gallery-grid > div:nth-child(2) { grid-column: span 2; }
+        .gallery-grid > div:nth-child(3) { grid-column: span 2; }
+        .gallery-grid > div:nth-child(4) { grid-column: span 3; }
+        .gallery-grid > div:nth-child(5) { grid-column: span 3; }
+
+        @media (max-width: 720px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 130px;
+            }
+            .gallery-grid > div { grid-column: span 1 !important; grid-row: auto !important; }
+            .gallery-grid > div:nth-child(1) { grid-column: span 2 !important; grid-row: span 2 !important; }
+        }
+
+        .gallery-grid svg { width: 100%; height: 100%; }
+
+        /* ───── Booking ───── */
+        .booking {
+            background: var(--ink);
+            color: var(--bg);
+        }
+
+        .booking .section-label { color: var(--accent-soft); }
+        .booking .section-label::before { background: var(--accent-soft); }
+
+        .booking-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 880px) {
+            .booking-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 5rem;
+            }
+        }
+
+        .booking-info p {
+            color: rgba(244, 240, 232, 0.7);
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .price-card {
+            background: rgba(244, 240, 232, 0.04);
+            border: 1px solid rgba(244, 240, 232, 0.12);
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(244, 240, 232, 0.12);
+            margin-bottom: 1.2rem;
+        }
+
+        .price-amount {
+            font-family: 'Fraunces', serif;
+            font-size: 2.8rem;
+            font-weight: 400;
+            letter-spacing: -0.03em;
+        }
+
+        .price-period {
+            font-size: 0.85rem;
+            color: rgba(244, 240, 232, 0.5);
+            letter-spacing: 0.08em;
+        }
+
+        .price-detail {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.88rem;
+            padding: 0.4rem 0;
+            color: rgba(244, 240, 232, 0.75);
+        }
+
+        .price-detail strong { color: var(--bg); }
+
+        /* ───── Booking form ───── */
+        .booking-form {
+            background: var(--bg);
+            color: var(--ink);
+            padding: 2.5rem;
+            border-radius: 12px;
+        }
+
+        .form-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.6rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .form-sub {
+            color: var(--ink-soft);
+            font-size: 0.88rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-field-full { grid-column: span 2; }
+
+        .form-field label {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--ink-soft);
+            margin-bottom: 0.4rem;
+        }
+
+        .form-field input,
+        .form-field select {
+            padding: 0.85rem 1rem;
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            font-family: 'Inter Tight', sans-serif;
+            font-size: 0.95rem;
+            color: var(--ink);
+            transition: all 0.2s;
+        }
+
+        .form-field input:focus,
+        .form-field select:focus {
+            outline: none;
+            border-color: var(--accent);
+            background: var(--bg);
+        }
+
+        .summary-box {
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            padding: 1.2rem;
+            margin: 1.4rem 0;
+        }
+
+        .summary-line {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            padding: 0.35rem 0;
+            color: var(--ink-soft);
+        }
+
+        .summary-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            padding-top: 0.8rem;
+            margin-top: 0.4rem;
+            border-top: 1px solid var(--line);
+            color: var(--ink);
+        }
+
+        .summary-total .total-num { color: var(--accent); }
+
+        .book-btn {
+            width: 100%;
+            padding: 1.1rem;
+            background: var(--ink);
+            color: var(--bg);
+            border: none;
+            border-radius: 100px;
+            font-family: 'Inter Tight', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            cursor: pointer;
+            transition: all 0.25s;
+            margin-top: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .book-btn:hover {
+            background: var(--accent);
+        }
+
+        .payment-note {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            justify-content: center;
+            margin-top: 1rem;
+            font-size: 0.78rem;
+            color: var(--ink-soft);
+        }
+
+        /* ───── Trust ───── */
+        .trust {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--paper);
+            border-top: 1px solid var(--line);
+        }
+
+        .trust-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .trust-sub {
+            color: var(--ink-soft);
+            font-size: 0.92rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .trust-item {
+            text-align: left;
+            padding-top: 1.2rem;
+            border-top: 1px solid var(--line);
+        }
+
+        .trust-item-num {
+            font-family: 'Fraunces', serif;
+            font-size: 2.2rem;
+            font-weight: 500;
+            color: var(--accent);
+            line-height: 1;
+        }
+
+        .trust-item-label {
+            font-size: 0.85rem;
+            color: var(--ink-soft);
+            margin-top: 0.4rem;
+        }
+
+        /* ───── Footer ───── */
+        footer {
+            background: var(--ink);
+            color: rgba(244, 240, 232, 0.6);
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+        }
+
+        .footer-brand {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            color: var(--bg);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-brand span { color: var(--accent-soft); font-style: italic; }
+
+        .footer-line {
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-meta {
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(244, 240, 232, 0.1);
+            color: rgba(244, 240, 232, 0.4);
+        }
+
+        /* ───── Animations ───── */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-tag, .hero h1, .hero p.lead, .hero-meta, .cta-row {
+            animation: fadeUp 0.8s ease forwards;
+            opacity: 0;
+        }
+        .hero h1 { animation-delay: 0.1s; }
+        .hero p.lead { animation-delay: 0.2s; }
+        .hero-meta { animation-delay: 0.3s; }
+        .cta-row { animation-delay: 0.4s; }
+        .hero-gallery { animation: fadeUp 1s ease 0.5s forwards; opacity: 0; }
+    </style>
+</head>
+<body>
+
+<nav class="nav">
+    <div class="brand">Casa <span>Riviera</span></div>
+    <div class="nav-meta">Meikarta · D2 · 2BR</div>
+</nav>
+
+<!-- ───────── HERO ───────── -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-tag">Premium Stay · Cikarang</div>
+        <h1>Tinggal seperti di <em>rumah</em>, dengan layanan hotel.</h1>
+        <p class="lead">2BR apartemen modern di tower Riviera District 2 Meikarta. Fully furnished, panoramic city view, akses langsung ke Central Park & Lippo Mall.</p>
+
+        <div class="hero-meta">
+            <div class="hero-meta-item">
+                <span class="hero-meta-label">Kamar</span>
+                <span class="hero-meta-value serif">2 BR</span>
+            </div>
+            <div class="hero-meta-item">
+                <span class="hero-meta-label">Luas</span>
+                <span class="hero-meta-value serif">48 m²</span>
+            </div>
+            <div class="hero-meta-item">
+                <span class="hero-meta-label">Kapasitas</span>
+                <span class="hero-meta-value serif">4 tamu</span>
+            </div>
+            <div class="hero-meta-item">
+                <span class="hero-meta-label">Floor</span>
+                <span class="hero-meta-value serif">High</span>
+            </div>
+        </div>
+
+        <div class="cta-row">
+            <a href="#booking" class="btn btn-primary">Cek Ketersediaan <span class="btn-arrow">→</span></a>
+            <a href="#gallery" class="btn btn-secondary">Lihat Galeri</a>
+        </div>
+    </div>
+
+    <div class="hero-gallery">
+        <div class="hero-img hero-img-main">
+            <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#d6c5a8"/>
+                        <stop offset="50%" stop-color="#c8a577"/>
+                        <stop offset="100%" stop-color="#8b6539"/>
+                    </linearGradient>
+                    <linearGradient id="room1" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#f4f0e8"/>
+                        <stop offset="100%" stop-color="#d4c9b3"/>
+                    </linearGradient>
+                </defs>
+                <!-- room interior -->
+                <rect width="400" height="400" fill="url(#room1)"/>
+                <!-- window with city view -->
+                <rect x="40" y="60" width="320" height="240" fill="url(#sky1)"/>
+                <!-- city skyline -->
+                <g fill="#4a3d2e" opacity="0.7">
+                    <rect x="50" y="200" width="40" height="100"/>
+                    <rect x="100" y="170" width="50" height="130"/>
+                    <rect x="160" y="190" width="35" height="110"/>
+                    <rect x="200" y="150" width="60" height="150"/>
+                    <rect x="265" y="180" width="40" height="120"/>
+                    <rect x="310" y="200" width="45" height="100"/>
+                </g>
+                <!-- window frame -->
+                <line x1="200" y1="60" x2="200" y2="300" stroke="#1c1c1a" stroke-width="3" opacity="0.4"/>
+                <line x1="40" y1="180" x2="360" y2="180" stroke="#1c1c1a" stroke-width="3" opacity="0.4"/>
+                <rect x="40" y="60" width="320" height="240" fill="none" stroke="#1c1c1a" stroke-width="4" opacity="0.5"/>
+                <!-- sofa -->
+                <rect x="80" y="320" width="240" height="50" rx="6" fill="#8b6e4e"/>
+                <rect x="80" y="305" width="240" height="20" rx="6" fill="#a08361"/>
+                <!-- coffee table -->
+                <rect x="160" y="370" width="80" height="20" rx="3" fill="#3d2f1f"/>
+            </svg>
+        </div>
+        <div class="hero-img">
+            <svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <rect width="200" height="200" fill="#e8dcc4"/>
+                <!-- bed -->
+                <rect x="30" y="80" width="140" height="80" rx="4" fill="#fbf8f2"/>
+                <rect x="30" y="80" width="140" height="20" fill="#d4c9b3"/>
+                <rect x="50" y="55" width="100" height="35" rx="6" fill="#8b6e4e"/>
+                <!-- pillows -->
+                <rect x="45" y="85" width="40" height="20" rx="3" fill="#e8dcc4"/>
+                <rect x="115" y="85" width="40" height="20" rx="3" fill="#e8dcc4"/>
+                <!-- lamp -->
+                <circle cx="40" cy="50" r="8" fill="#c08c4c"/>
+                <line x1="40" y1="58" x2="40" y2="80" stroke="#3d2f1f" stroke-width="2"/>
+            </svg>
+        </div>
+        <div class="hero-img">
+            <svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <rect width="200" height="200" fill="#d4c9b3"/>
+                <!-- kitchen counter -->
+                <rect x="0" y="120" width="200" height="80" fill="#1c1c1a"/>
+                <rect x="0" y="115" width="200" height="10" fill="#fbf8f2"/>
+                <!-- cabinets above -->
+                <rect x="20" y="30" width="50" height="60" fill="#8b6e4e"/>
+                <rect x="80" y="30" width="50" height="60" fill="#8b6e4e"/>
+                <rect x="140" y="30" width="50" height="60" fill="#8b6e4e"/>
+                <line x1="45" y1="30" x2="45" y2="90" stroke="#fbf8f2" stroke-width="1"/>
+                <line x1="105" y1="30" x2="105" y2="90" stroke="#fbf8f2" stroke-width="1"/>
+                <line x1="165" y1="30" x2="165" y2="90" stroke="#fbf8f2" stroke-width="1"/>
+                <!-- pendant lights -->
+                <line x1="60" y1="0" x2="60" y2="20" stroke="#3d2f1f" stroke-width="1"/>
+                <circle cx="60" cy="22" r="6" fill="#c08c4c"/>
+                <line x1="140" y1="0" x2="140" y2="20" stroke="#3d2f1f" stroke-width="1"/>
+                <circle cx="140" cy="22" r="6" fill="#c08c4c"/>
+            </svg>
+        </div>
+    </div>
+</section>
+
+<!-- ───────── ABOUT ───────── -->
+<section class="about" id="about">
+    <div class="about-grid">
+        <div>
+            <div class="section-label">Tentang Unit</div>
+            <h2 class="section-title">Tempat singgah <em>yang terasa</em> seperti rumah sendiri.</h2>
+        </div>
+        <div class="about-text">
+            <p>Setiap detail di Casa Riviera dirancang untuk memberikan pengalaman tinggal yang tenang dan nyaman. Cocok untuk keluarga yang berlibur, pasangan yang ingin getaway, atau profesional yang butuh tempat singgah berkelas selama perjalanan bisnis ke Cikarang.</p>
+            <p>Unit 2BR ini fully furnished dengan furniture pilihan, dilengkapi smart TV, full kitchen, mesin cuci, dan akses langsung ke seluruh amenities tower Riviera District 2.</p>
+
+            <ul class="feature-list">
+                <li><strong>2 Kamar Tidur</strong><span>Master + 2nd room, AC keduanya</span></li>
+                <li><strong>Full Kitchen</strong><span>Kompor, kulkas, microwave</span></li>
+                <li><strong>Smart TV</strong><span>Netflix, YouTube ready</span></li>
+                <li><strong>Mesin Cuci</strong><span>In-unit, free deterjen</span></li>
+                <li><strong>Free WiFi</strong><span>Fiber 100 Mbps</span></li>
+                <li><strong>Pool & Gym</strong><span>Free akses tower</span></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ───────── GALLERY ───────── -->
+<section id="gallery">
+    <div class="section-label">Galeri</div>
+    <h2 class="section-title">Yang akan Anda <em>nikmati</em>.</h2>
+
+    <div class="gallery-grid">
+        <div>
+            <svg viewBox="0 0 400 320" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="320" fill="#e8dcc4"/>
+                <rect x="0" y="220" width="400" height="100" fill="#8b6e4e"/>
+                <rect x="60" y="60" width="280" height="160" fill="#fbf8f2"/>
+                <rect x="80" y="80" width="240" height="120" fill="#d6c5a8"/>
+                <!-- artwork -->
+                <circle cx="200" cy="130" r="30" fill="#8b3a1d"/>
+                <rect x="160" y="170" width="80" height="4" fill="#3d2f1f"/>
+                <!-- couch -->
+                <rect x="100" y="240" width="200" height="50" rx="6" fill="#3d2f1f"/>
+                <rect x="100" y="225" width="200" height="20" rx="6" fill="#5a4636"/>
+            </svg>
+        </div>
+        <div>
+            <svg viewBox="0 0 200 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <rect width="200" height="160" fill="#c8a577"/>
+                <rect x="40" y="40" width="120" height="80" fill="#fbf8f2" rx="4"/>
+                <circle cx="100" cy="80" r="20" fill="#8b3a1d" opacity="0.3"/>
+            </svg>
+        </div>
+        <div>
+            <svg viewBox="0 0 200 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <rect width="200" height="160" fill="#1c1c1a"/>
+                <rect x="0" y="60" width="200" height="100" fill="#3d2f1f"/>
+                <rect x="20" y="20" width="40" height="50" fill="#8b6e4e"/>
+                <rect x="80" y="20" width="40" height="50" fill="#8b6e4e"/>
+                <rect x="140" y="20" width="40" height="50" fill="#8b6e4e"/>
+                <circle cx="40" cy="100" r="3" fill="#c08c4c"/>
+                <circle cx="100" cy="100" r="3" fill="#c08c4c"/>
+                <circle cx="160" cy="100" r="3" fill="#c08c4c"/>
+            </svg>
+        </div>
+        <div>
+            <svg viewBox="0 0 300 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <rect width="300" height="160" fill="#d4c9b3"/>
+                <rect x="50" y="50" width="200" height="80" rx="4" fill="#fbf8f2"/>
+                <rect x="50" y="50" width="200" height="20" fill="#8b6e4e"/>
+                <rect x="70" y="60" width="50" height="14" rx="2" fill="#e8dcc4"/>
+                <rect x="180" y="60" width="50" height="14" rx="2" fill="#e8dcc4"/>
+                <circle cx="60" cy="40" r="6" fill="#c08c4c"/>
+            </svg>
+        </div>
+        <div>
+            <svg viewBox="0 0 300 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="poolg" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#8db4c4"/>
+                        <stop offset="100%" stop-color="#3d6878"/>
+                    </linearGradient>
+                </defs>
+                <rect width="300" height="160" fill="url(#poolg)"/>
+                <ellipse cx="150" cy="80" rx="100" ry="40" fill="#c4dde6" opacity="0.4"/>
+                <line x1="80" y1="60" x2="220" y2="100" stroke="#fbf8f2" stroke-width="1" opacity="0.5"/>
+                <line x1="80" y1="100" x2="220" y2="60" stroke="#fbf8f2" stroke-width="1" opacity="0.5"/>
+            </svg>
+        </div>
+    </div>
+</section>
+
+<!-- ───────── BOOKING ───────── -->
+<section class="booking" id="booking">
+    <div class="booking-grid">
+        <div class="booking-info">
+            <div class="section-label">Booking Langsung</div>
+            <h2 class="section-title" style="color: var(--bg);">Tanpa fee platform. <em style="color: var(--accent-soft);">Tanpa perantara.</em></h2>
+            <p>Booking di sini berarti Anda berbicara langsung dengan owner. Pembayaran aman via Midtrans (QRIS, transfer bank, e-wallet), konfirmasi otomatis, dan harga lebih kompetitif karena tidak ada fee platform.</p>
+
+            <div class="price-card">
+                <div class="price-row">
+                    <div>
+                        <div class="price-amount serif">Rp 750<span style="font-size: 1.2rem;">K</span></div>
+                        <div class="price-period">per malam · sudah termasuk pajak</div>
+                    </div>
+                </div>
+                <div class="price-detail"><span>Min. stay</span><strong>2 malam</strong></div>
+                <div class="price-detail"><span>Check-in</span><strong>15:00 WIB</strong></div>
+                <div class="price-detail"><span>Check-out</span><strong>12:00 WIB</strong></div>
+                <div class="price-detail"><span>Cleaning fee</span><strong>Rp 100K (sekali)</strong></div>
+            </div>
+        </div>
+
+        <div class="booking-form">
+            <div class="form-title">Form Booking</div>
+            <div class="form-sub">Isi data Anda, kami konfirmasi dalam &lt; 1 jam.</div>
+
+            <div class="form-row">
+                <div class="form-field">
+                    <label>Check-in</label>
+                    <input type="date" id="checkin" value="2026-05-20">
+                </div>
+                <div class="form-field">
+                    <label>Check-out</label>
+                    <input type="date" id="checkout" value="2026-05-23">
+                </div>
+                <div class="form-field">
+                    <label>Tamu</label>
+                    <select id="guests">
+                        <option value="1">1 tamu</option>
+                        <option value="2" selected>2 tamu</option>
+                        <option value="3">3 tamu</option>
+                        <option value="4">4 tamu</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label>Phone</label>
+                    <input type="tel" placeholder="08xx-xxxx-xxxx">
+                </div>
+                <div class="form-field form-field-full">
+                    <label>Nama Lengkap</label>
+                    <input type="text" placeholder="Nama sesuai KTP">
+                </div>
+                <div class="form-field form-field-full">
+                    <label>Email</label>
+                    <input type="email" placeholder="email@example.com">
+                </div>
+            </div>
+
+            <div class="summary-box">
+                <div class="summary-line"><span id="nights-label">3 malam × Rp 750.000</span><span id="subtotal">Rp 2.250.000</span></div>
+                <div class="summary-line"><span>Cleaning fee</span><span>Rp 100.000</span></div>
+                <div class="summary-total">
+                    <span>Total</span>
+                    <span class="total-num" id="total">Rp 2.350.000</span>
+                </div>
+            </div>
+
+            <button class="book-btn" onclick="bookNow()">
+                Bayar via Midtrans <span>→</span>
+            </button>
+            <div class="payment-note">🔒 Pembayaran aman · QRIS · Transfer · E-Wallet</div>
+        </div>
+    </div>
+</section>
+
+<!-- ───────── TRUST ───────── -->
+<section class="trust">
+    <div class="trust-title serif">Dipercaya oleh tamu dari seluruh Indonesia</div>
+    <div class="trust-sub">Owner-managed, response &lt; 1 jam</div>
+
+    <div class="trust-grid">
+        <div class="trust-item">
+            <div class="trust-item-num serif">4.9</div>
+            <div class="trust-item-label">Rating dari 47 tamu sebelumnya</div>
+        </div>
+        <div class="trust-item">
+            <div class="trust-item-num serif">98%</div>
+            <div class="trust-item-label">Tamu merekomendasikan ke teman</div>
+        </div>
+        <div class="trust-item">
+            <div class="trust-item-num serif">&lt;1h</div>
+            <div class="trust-item-label">Rata-rata waktu respon</div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-brand">Casa <span>Riviera</span></div>
+    <div class="footer-line">Premium 2BR Stay · Meikarta Riviera District 2 · Cikarang</div>
+    <div class="footer-meta">Powered by asacasastay.com</div>
+</footer>
+
+<script>
+    function recalc() {
+        const checkin = new Date(document.getElementById('checkin').value);
+        const checkout = new Date(document.getElementById('checkout').value);
+        const nights = Math.max(1, Math.round((checkout - checkin) / (1000 * 60 * 60 * 24)));
+        const rate = 750000;
+        const cleaning = 100000;
+        const subtotal = nights * rate;
+        const total = subtotal + cleaning;
+
+        document.getElementById('nights-label').textContent = `${nights} malam × Rp 750.000`;
+        document.getElementById('subtotal').textContent = `Rp ${subtotal.toLocaleString('id-ID')}`;
+        document.getElementById('total').textContent = `Rp ${total.toLocaleString('id-ID')}`;
+    }
+
+    document.getElementById('checkin').addEventListener('change', recalc);
+    document.getElementById('checkout').addEventListener('change', recalc);
+
+    function bookNow() {
+        alert('Demo: pada implementasi nyata akan redirect ke Midtrans payment gateway dengan QRIS / Transfer Bank / E-Wallet.\n\nUntuk owner: confirmation email + admin dashboard.\nUntuk tamu: receipt + check-in instructions.');
+    }
+</script>
+
+</body>
+</html>
